@@ -1,0 +1,154 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.4em}{0.8em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Solving Polynomial Equations}
+\fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\worksheettitle}{Solving Polynomial Equations}
+\newcommand{\qspace}{\vspace{1.1cm}}
+
+\setlist[enumerate,1]{leftmargin=1.6em, itemsep=0.4em, topsep=0.2em}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries \worksheettitle}\\[0.3em]
+  {\normalsize Fluency \(\cdot\) Problem Solving \(\cdot\) Reasoning \(\cdot\) Enrichment}
+\end{center}
+
+\vspace{0.5em}
+
+\section{Fluency}
+
+\subsection*{Solving equations already in factored form}
+For each equation, use the zero-factor law to find all values of $x$.
+
+\begin{enumerate}
+  \item $(x-2)(x+3) = 0$
+  \qspace
+  \item $(2x+1)(3x+7) = 0$
+  \qspace
+\end{enumerate}
+
+\subsection*{Factorising monic quadratics}
+Factorise each expression, then solve the resulting equation.
+
+\begin{enumerate}[resume]
+  \item $x^2 - 7x + 12 = 0$
+  \qspace
+  \item $x^2 + 3x - 10 = 0$
+  \qspace
+  \item $x^2 - 4x - 21 = 0$
+  \qspace
+\end{enumerate}
+
+\subsection*{Factorising non-monic quadratics}
+Factorise each expression by splitting the middle term, then solve the resulting equation.
+
+\begin{enumerate}[resume]
+  \item $2x^2 + 7x + 3 = 0$
+  \qspace
+  \item $3x^2 - 5x - 2 = 0$
+  \qspace
+  \item $6x^2 + 11x - 10 = 0$
+  \qspace
+\end{enumerate}
+
+\subsection*{Rearranging before factorising}
+Rearrange each equation so that one side is equal to zero, then factorise and solve.
+
+\begin{enumerate}[resume]
+  \item $3x^2 + 2x = 5$
+  \qspace
+  \item $2x^2 - 3x = 9$
+  \qspace
+\end{enumerate}
+
+\newpage
+\section{Problem Solving}
+
+\begin{enumerate}
+  \item The volume of water in a bucket after $t$ minutes is modelled by
+  \[
+    V = t^2 + 5t + 6,
+  \]
+  where $V$ is measured in litres. How many minutes does it take for the bucket to contain 20 litres of water? (Discard any solution that does not make sense.)
+  \qspace
+
+  \item A rectangular garden bed has a length that is 3 m longer than its width. The area of the garden bed is 40 m$^2$. Let $w$ be the width, in metres. Write an equation for the area and solve it to find the width of the garden bed.
+  \qspace
+
+  \item A ball is thrown upward from ground level. Its height above the ground, $h$ metres, after $t$ seconds is given by
+  \[
+    h = -5t^2 + 20t.
+  \]
+  Find the times at which the ball is 15 m above the ground. Explain why there are two possible answers.
+  \qspace
+
+  \item A company's weekly profit, $P$ (in thousands of dollars), from selling $x$ hundred items is modelled by
+  \[
+    P = x^2 - 2x - 15.
+  \]
+  Find the number of items (to the nearest hundred) that must be sold for the company to break even, i.e.\ $P = 0$.
+  \qspace
+
+  \item The product of two consecutive positive integers is 132. Let $n$ be the smaller integer. Write an equation and solve it to find both integers.
+  \qspace
+
+  \item A picture frame is designed so that its length is 1 cm more than twice its width. The area of the frame is 55 cm$^2$. Let $w$ be the width, in centimetres. Write an equation for the area and solve it to find the width of the frame.
+  \qspace
+\end{enumerate}
+
+\newpage
+\section{Reasoning}
+
+\begin{enumerate}
+  \item State the \textbf{zero-factor law} (also called the zero product property) in your own words.
+  \qspace
+
+  \item Explain \emph{why} the zero-factor law works. In your explanation, consider what it means for two numbers to multiply to give zero, and why at least one of them must be zero.
+  \qspace
+
+  \item Consider the equation $(x-2)(x+3) = 6$. Explain why we \emph{cannot} apply the zero-factor law directly to this equation, even though the left-hand side is already factored. What must be done to the equation before it can be solved by factorising?
+  \qspace
+
+  \item When factorising a non-monic quadratic such as $2x^2 + 7x + 3$, we ``split the middle term'' into two terms. Explain why this method works, and why the two numbers we look for must multiply to give $a \times c$ and add to give $b$.
+  \qspace
+\end{enumerate}
+
+\newpage
+\section{Enrichment}
+
+Some equations involving powers can be solved by rewriting them as polynomial equations. If every term can be written using the \emph{same base}, the equation can be rewritten as a quadratic in a new variable (for example, $y = 3^x$), which can then be solved by factorising.
+
+\begin{enumerate}
+  \item Solve for $x$:
+  \[
+    9^x - 4(3^x) + 3 = 0.
+  \]
+  \emph{Hint: write $9^x$ as a power of 3, then let $y = 3^x$.}
+  \qspace
+
+  \item Solve for $x$:
+  \[
+    4^x - 6(2^x) + 8 = 0.
+  \]
+  \emph{Hint: write $4^x$ as a power of 2, then let $y = 2^x$.}
+  \qspace
+\end{enumerate}
+
+\end{document}
