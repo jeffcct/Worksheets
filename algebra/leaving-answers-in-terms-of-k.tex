@@ -1,0 +1,194 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.4em}{0.8em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Leaving Answers in Terms of $k$}
+\fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\worksheettitle}{Solving Equations: Leaving Answers in Terms of a Parameter}
+\newcommand{\qspace}{\vspace{1.0cm}}
+
+\setlist[enumerate,1]{leftmargin=1.6em, itemsep=0.4em, topsep=0.2em}
+\setlist[enumerate,2]{leftmargin=1.4em, itemsep=0.3em, topsep=0.2em}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries \worksheettitle}\\[0.3em]
+  {\normalsize Fluency \(\cdot\) Problem Solving \(\cdot\) Reasoning \(\cdot\) Enrichment}
+\end{center}
+
+\vspace{0.3em}
+\noindent\textit{Big idea: when a quantity in a problem is represented by a letter (a parameter, such as $k$) instead of a specific number, you solve the equation exactly as usual --- but your final answer is an \textbf{algebraic expression in terms of that letter}, not a single number. This expression is a formula: substitute any valid value of the parameter into it, and you get the matching numerical answer instantly.}
+
+\vspace{0.5em}
+
+\section{Fluency}
+
+\subsection*{Solving simple equations with a letter constant}
+Solve each equation for $x$. Leave your answer as an expression in terms of $k$.
+
+\begin{enumerate}
+  \item $x + k = 12$
+  \qspace
+  \item $x - 7 = k$
+  \qspace
+  \item $3x = k$
+  \qspace
+  \item $kx = 20$ \quad (assume $k \neq 0$)
+  \qspace
+\end{enumerate}
+
+\subsection*{Solving two-step equations with a letter constant}
+Solve each equation for $x$, in terms of $k$.
+
+\begin{enumerate}[resume]
+  \item $2x + k = 10$
+  \qspace
+  \item $kx - 4 = 16$ \quad (assume $k \neq 0$)
+  \qspace
+  \item $3x + k = 2x + 5k$
+  \qspace
+\end{enumerate}
+
+\subsection*{Using a parametric answer}
+This is the point of leaving an answer in terms of $k$: once you have the formula, you can substitute \emph{any} value of $k$ without solving the equation again.
+
+\begin{enumerate}[resume]
+  \item The solution to an equation is $x = k + 3$. Find the value of $x$ when $k = 7$.
+  \qspace
+  \item Using your answer to Question 4 ($x = \dfrac{20}{k}$), find the value of $x$ when $k = 4$, and again when $k = 5$. You should not need to resolve the original equation $kx=20$ each time.
+  \qspace
+\end{enumerate}
+
+\subsection*{Changing the subject of a formula}
+\begin{enumerate}[resume]
+  \item Rearrange $P = 2(l + w)$ to write $l$ in terms of $P$ and $w$.
+  \qspace
+  \item A rectangle has width $w$ cm and perimeter $k$ cm. Find an expression for the length of the rectangle in terms of $k$ and $w$.
+  \qspace
+\end{enumerate}
+
+\newpage
+\section{Problem Solving}
+
+\noindent In each problem below, one quantity that would normally be a specific number is instead represented by the parameter $k$. Define your variable, translate every constraint into algebra, combine the constraints into one equation, and solve for the unknown \textbf{in terms of $k$}. Where indicated, also state a restriction on $k$ for your answer to make sense in context.
+
+\begin{enumerate}
+  \item \textbf{Rectangle.} A rectangle's length is twice its width. Its perimeter is $k$ cm. Let the width be $w$ cm.
+  \begin{enumerate}
+    \item Form an equation for the perimeter and solve it to find $w$ in terms of $k$.
+    \item Hence write the length in terms of $k$.
+    \item What restriction must $k$ satisfy for the width to be a positive length?
+  \end{enumerate}
+  \qspace
+
+  \item \textbf{Triangle.} In a triangle, the second side is 4 cm longer than the first side, and the third side is twice the length of the first side. The perimeter of the triangle is $k$ cm. Let the first side be $x$ cm. Form an equation and solve it to find all three side lengths in terms of $k$.
+  \qspace
+
+  \item \textbf{Ages.} Sarah is 3 years older than her brother Tom. In 5 years' time, the sum of their ages will be $k$. Let Tom's current age be $t$ years. Form an equation and solve it to find Tom's and Sarah's current ages in terms of $k$.
+  \qspace
+
+  \item \textbf{Three numbers.} Three numbers have a sum of $k$. The second number is 5 more than the first. The third number is three times the second. Let the first number be $n$. Form an equation and solve it to find all three numbers in terms of $k$.
+  \qspace
+
+  \item \textbf{Coins.} A charity box contains only \$1 and \$2 coins. There are 5 more \$2 coins than \$1 coins. The total value of all the coins is \$$k$. Let the number of \$1 coins be $x$.
+  \begin{enumerate}
+    \item Form an equation and solve it to find the number of \$1 coins in terms of $k$.
+    \item Hence find the number of \$2 coins in terms of $k$.
+  \end{enumerate}
+  \qspace
+
+  \item \textbf{Ribbon.} A ribbon of length $k$ cm is cut into three pieces. The second piece is twice as long as the first piece. The third piece is 20 cm longer than the second piece. Let the first piece be $x$ cm.
+  \begin{enumerate}
+    \item Form an equation and solve it to find the length of each piece in terms of $k$.
+    \item What restriction must $k$ satisfy for all three pieces to have a positive length?
+  \end{enumerate}
+  \qspace
+\end{enumerate}
+
+\newpage
+\section{Reasoning}
+
+\begin{enumerate}
+  \item \textbf{Why leave it in terms of $k$?} Explain why, when solving $2x + k = 10$ for $x$, the answer $x = \dfrac{10-k}{2}$ is left as an algebraic expression rather than a single number. Under what circumstance \emph{would} you be able to state a single numerical value for $x$?
+  \qspace
+
+  \item \textbf{Find the error.} A student solves $kx = 20$ for $x$ by writing $x = 20 - k$.
+  \begin{enumerate}
+    \item Identify the error, explain why it is incorrect, and give the correct solution in terms of $k$.
+    \item What value must $k$ not equal for your solution to be valid? Explain what goes wrong if $k$ takes that value.
+  \end{enumerate}
+  \qspace
+
+  \item \textbf{Comparing methods.} Two students solve $3x + k = 2x + 5k$ for $x$ in different orders.
+  \begin{itemize}
+    \item Student A first subtracts $2x$ from both sides.
+    \item Student B first subtracts $k$ from both sides.
+  \end{itemize}
+  Complete the solution both ways. Explain why both orders are valid and must give the same expression for $x$ in terms of $k$.
+  \qspace
+
+  \item \textbf{Always, sometimes, or never true.} Consider the statement: \textit{``The equation $kx = 12$ always has exactly one solution for $x$.''} Decide whether this statement is always, sometimes, or never true. Justify your answer using algebra.
+  \qspace
+
+  \item \textbf{Interpreting a restriction.} In the Ribbon problem (Problem Solving, Question 6) you found $x = \dfrac{k-20}{5}$ for the length of the first piece, and a restriction on $k$ for this to be positive. Explain, in words, what this restriction tells you about the shortest possible ribbon that could be used for this problem to make physical sense.
+  \qspace
+
+  \item \textbf{What stays the same, what changes.} Explain why the algebraic steps used to solve $2x + k = 11$ for $x$ are exactly the same steps used to solve $2x + 3 = 11$ for $x$. What has changed between the two equations, and what has stayed the same?
+  \qspace
+\end{enumerate}
+
+\newpage
+\section{Enrichment}
+
+\begin{enumerate}
+  \item \textbf{A second parameter.} A rectangle has width $w$ and length equal to $k$ times its width, where $k > 1$ is a constant. Its perimeter is $P$.
+  \begin{enumerate}
+    \item Find an expression for $w$ in terms of $k$ and $P$.
+    \item Hence find an expression for the length in terms of $k$ and $P$.
+    \item Use your formulas to find the width and length when $k = 3$ and $P = 48$. Check that these values satisfy the original conditions.
+    \item Describe what happens to the width, as a fraction of $P$, as $k$ increases without bound. What does this tell you about the shape of the rectangle?
+  \end{enumerate}
+  \qspace
+
+  \item \textbf{Reverse-engineering an equation.} An equation of the form $px + q = k$ has solution $x = \dfrac{k - q}{p}$ (where $p \neq 0$).
+  \begin{enumerate}
+    \item Choose your own values for $p$ and $q$ so that, when $k = 50$, the solution is $x = 8$.
+    \item Show that your chosen equation does give this answer.
+    \item Is your choice of $p$ and $q$ the only one that works? Explain, and if not, give a second valid pair.
+  \end{enumerate}
+  \qspace
+
+  \item \textbf{Combining a parametric solution with an extra condition.} A triangle has sides $x$, $x + 4$, and $2x - 1$ (all in centimetres), and its perimeter is $k$ cm.
+  \begin{enumerate}
+    \item Show that $x = \dfrac{k - 3}{4}$.
+    \item Write down the three triangle inequalities that $x$ must satisfy (the sum of any two sides must exceed the third), and show that only one of them gives a genuine restriction: $x > 2.5$.
+    \item Combine your results from (a) and (b) to find the values of $k$ for which this triangle can actually exist.
+  \end{enumerate}
+  \qspace
+
+  \item \textbf{Proving a general result.} Consider the general linear equation $ax + b = k$, where $a \neq 0$.
+  \begin{enumerate}
+    \item Solve for $x$ in terms of $a$, $b$, and $k$.
+    \item By substituting your expression back into the original equation, prove algebraically that it satisfies $ax + b = k$ for every value of $k$.
+    \item Explain why the condition $a \neq 0$ is essential for this general solution to exist.
+    \item If $a = 0$, what does the equation become? Explain why the equation then has \emph{no} solution when $b \neq k$, but \emph{infinitely many} solutions when $b = k$.
+  \end{enumerate}
+  \qspace
+\end{enumerate}
+
+\end{document}
