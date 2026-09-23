@@ -1,0 +1,171 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.4em}{0.8em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Solving Exponential Equations}
+\fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\worksheettitle}{Solving Equations with Exponentials}
+\newcommand{\qspace}{\vspace{0.9cm}}
+
+\setlist[enumerate,1]{leftmargin=1.6em, itemsep=0.4em, topsep=0.2em}
+\setlist[enumerate,2]{leftmargin=1.4em, itemsep=0.3em, topsep=0.2em}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries \worksheettitle}\\[0.3em]
+  {\normalsize Fluency \(\cdot\) Problem Solving \(\cdot\) Enrichment}
+\end{center}
+
+\vspace{0.3em}
+\noindent\textit{Big idea: an exponential equation can be solved without calculus or logarithms as soon as both sides are written as a power of the \textbf{same base}. Once that is true, the exponents themselves must be equal, turning the problem into an ordinary equation.}
+
+\vspace{0.5em}
+
+\section{Fluency}
+
+\subsection*{Multiplying exponentials (index law: $a^m \times a^n = a^{m+n}$)}
+Simplify each expression.
+
+\begin{enumerate}
+  \item $2^3 \times 2^4$
+  \qspace
+  \item $x^5 \times x^2$
+  \qspace
+  \item $5^2 \times 5^4 \times 5$
+  \qspace
+\end{enumerate}
+
+\subsection*{Dividing exponentials (index law: $a^m \div a^n = a^{m-n}$)}
+Simplify each expression.
+
+\begin{enumerate}[resume]
+  \item $\dfrac{5^7}{5^3}$
+  \qspace
+  \item $\dfrac{x^9}{x^4}$
+  \qspace
+  \item $\dfrac{3^8 \times 3^2}{3^5}$
+  \qspace
+\end{enumerate}
+
+\subsection*{The power law (raising a power to a further power: $(a^m)^n = a^{mn}$)}
+Simplify each expression. For Question 9, also evaluate your answer as a single number.
+
+\begin{enumerate}[resume]
+  \item $(3^2)^4$
+  \qspace
+  \item $(x^3)^5$
+  \qspace
+  \item $(2^2)^3$
+  \qspace
+\end{enumerate}
+
+\subsection*{Writing exponentials with a common base}
+\begin{enumerate}[resume]
+  \item Write 32 as a power of 2.
+  \qspace
+  \item Write 81 as a power of 3.
+  \qspace
+  \item Write $\dfrac{1}{9}$ as a power of 3.
+  \qspace
+  \item Rewrite $9^x$ as a power of 3 (in the form $3^{\,\square}$).
+  \qspace
+  \item Rewrite $\left(\dfrac{1}{3}\right)^x$ as a power of 3.
+  \qspace
+\end{enumerate}
+
+\subsection*{Solving exponential equations}
+Once both sides are written as a power of the same base, equate the exponents and solve.
+
+\begin{enumerate}[resume]
+  \item Solve $2^x = 32$.
+  \qspace
+  \item Solve $5^x = \dfrac{1}{25}$.
+  \qspace
+  \item Solve $3^{2x-1} = 27$.
+  \qspace
+\end{enumerate}
+
+\newpage
+\section{Problem Solving}
+
+\noindent Many exponential equations are not immediately ready to solve. First \textbf{rearrange} the equation so the exponential term is on its own, then rewrite both sides with the same base, then equate exponents and solve.
+
+\begin{enumerate}
+  \item Solve $3^x + 5 = 14$.
+  \qspace
+
+  \item Solve $2 \times 5^x - 3 = 47$.
+  \qspace
+
+  \item Solve $\dfrac{4^x}{2} + 1 = 33$.
+  \qspace
+
+  \item Solve $50 - 2^x = -14$.
+  \qspace
+
+  \item Solve $9^x = 3^{x+4}$. (Both sides are already exponential --- rewrite the left-hand side using base 3 before equating exponents.)
+  \qspace
+\end{enumerate}
+
+\subsection*{Leaving your answer in terms of $k$}
+In these problems, $k$ is a fixed but unspecified number. Solve for $x$ as usual, leaving your final answer as an expression in terms of $k$.
+
+\begin{enumerate}[resume]
+  \item Solve $3^{2x-1} = 3^{k+5}$ for $x$ in terms of $k$.
+  \qspace
+
+  \item Solve $4^x = 8^k$ for $x$ in terms of $k$. (Rewrite both sides using base 2 first.)
+  \qspace
+\end{enumerate}
+
+\newpage
+\section{Enrichment}
+
+\subsection*{Factoring out a separate prime}
+When a base is a product of two primes (such as $6 = 2 \times 3$), dividing by a power of one of those primes can leave a power of the other. For example,
+\[
+  \frac{6^{x+3}}{3^{x+3}} = \left(\frac{6}{3}\right)^{x+3} = 2^{x+3}.
+\]
+
+\begin{enumerate}
+  \item Use this idea to solve: $\dfrac{6^{x+3}}{3^{x+3}} = 2^{5x+1}$.
+  \qspace
+
+  \item Solve: $\dfrac{10^{x+1}}{5^{x+1}} = 2^{3x-2}$.
+  \qspace
+
+  \item Solve: $\dfrac{15^{x}}{5^{x}} = 3^{2x-4}$.
+  \qspace
+\end{enumerate}
+
+\subsection*{All skills at once}
+\begin{enumerate}[resume]
+  \item Consider the equation
+  \[
+    \frac{(4^{x})^{2}}{2^{3}} \times \frac{20^{x+1}}{5^{x+1}} = 2^{2k-1}.
+  \]
+  \begin{enumerate}
+    \item Simplify $\dfrac{(4^{x})^{2}}{2^{3}}$ as a single power of 2.
+    \item Simplify $\dfrac{20^{x+1}}{5^{x+1}}$ as a single power of 2, by factoring out the prime 5.
+    \item Combine your two results and equate exponents to solve for $x$ in terms of $k$.
+    \item Check your formula by substituting $k = 6$ into your expression for $x$, then substituting both values back into the original equation to confirm both sides are equal.
+  \end{enumerate}
+  \qspace
+\end{enumerate}
+
+\end{document}
