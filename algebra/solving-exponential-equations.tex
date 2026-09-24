@@ -20,13 +20,16 @@
 \renewcommand{\headrulewidth}{0.4pt}
 
 \newcommand{\worksheettitle}{Solving Equations with Exponentials}
-\newcommand{\qspace}{\vspace{0.7cm}}
+\newcommand{\qspace}{\vspace{0.65cm}}
 
 \setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.3em, topsep=0.15em}
 \setlist[enumerate,2]{leftmargin=1.2em, itemsep=0.25em, topsep=0.15em}
 
 \setlength{\columnsep}{1.1cm}
 \setlength{\columnseprule}{0.4pt}
+
+\newenvironment{qtwocol}{\begin{multicols}{2}\begin{enumerate}[resume]}{\end{enumerate}\end{multicols}}
+\newenvironment{qtwocolstart}{\begin{multicols}{2}\begin{enumerate}}{\end{enumerate}\end{multicols}}
 
 \begin{document}
 
@@ -42,12 +45,10 @@
 
 \section{Fluency}
 
-\begin{multicols}{2}
-
 \subsection*{Multiplying exponentials ($a^m \times a^n = a^{m+n}$)}
 Simplify each expression.
 
-\begin{enumerate}
+\begin{qtwocolstart}
   \item $2^3 \times 2^4$
   \qspace
   \item $x^5 \times x^2$
@@ -56,12 +57,16 @@ Simplify each expression.
   \qspace
   \item $4^2 \times 4^5$
   \qspace
-\end{enumerate}
+  \item $3 \times 3^4 \times 3^2$
+  \qspace
+  \item $x^3 \times x \times x^4$
+  \qspace
+\end{qtwocolstart}
 
 \subsection*{Dividing exponentials ($a^m \div a^n = a^{m-n}$)}
 Simplify each expression.
 
-\begin{enumerate}[resume]
+\begin{qtwocol}
   \item $\dfrac{5^7}{5^3}$
   \qspace
   \item $\dfrac{x^9}{x^4}$
@@ -70,12 +75,16 @@ Simplify each expression.
   \qspace
   \item $\dfrac{6^{10}}{6^{6}}$
   \qspace
-\end{enumerate}
+  \item $\dfrac{7^{12}}{7^{5}}$
+  \qspace
+  \item $\dfrac{x^{11}}{x^{3}}$
+  \qspace
+\end{qtwocol}
 
 \subsection*{The power law ($(a^m)^n = a^{mn}$)}
-Simplify each expression. For Questions 11 and 12, also evaluate your answer as a single number.
+Simplify each expression. For Questions 15 and 17, also evaluate your answer as a single number.
 
-\begin{enumerate}[resume]
+\begin{qtwocol}
   \item $(3^2)^4$
   \qspace
   \item $(x^3)^5$
@@ -84,10 +93,14 @@ Simplify each expression. For Questions 11 and 12, also evaluate your answer as 
   \qspace
   \item $(5^3)^2$
   \qspace
-\end{enumerate}
+  \item $(2^4)^3$
+  \qspace
+  \item $(x^2)^6$
+  \qspace
+\end{qtwocol}
 
 \subsection*{Writing exponentials with a common base}
-\begin{enumerate}[resume]
+\begin{qtwocol}
   \item Write 32 as a power of 2.
   \qspace
   \item Write 81 as a power of 3.
@@ -100,12 +113,12 @@ Simplify each expression. For Questions 11 and 12, also evaluate your answer as 
   \qspace
   \item Rewrite $\left(\dfrac{1}{3}\right)^x$ as a power of 3.
   \qspace
-\end{enumerate}
+\end{qtwocol}
 
 \subsection*{Combining related bases into a single base}
 Some expressions mix two different bases that are both powers of the same prime (for example, $8 = 2^3$). Rewrite every term with that prime as the base, then use the multiplying or dividing law to combine them into a \textbf{single power}.
 
-\begin{enumerate}[resume]
+\begin{qtwocol}
   \item Simplify $2^{3x+1} \times 8^{2x+8}$ as a single power of 2.
   \qspace
   \item Simplify $9^{x} \times 3^{2x+5}$ as a single power of 3.
@@ -114,32 +127,37 @@ Some expressions mix two different bases that are both powers of the same prime 
   \qspace
   \item Simplify $\dfrac{16^{x+1}}{4^{x-2}}$ as a single power of 2.
   \qspace
-\end{enumerate}
+  \item Simplify $27^{x} \times 3^{x+2}$ as a single power of 3.
+  \qspace
+  \item Simplify $\dfrac{8^{x+2}}{2^{x-1}}$ as a single power of 2.
+  \qspace
+\end{qtwocol}
 
 \subsection*{Solving exponential equations}
 Once both sides are written as a power of the same base, equate the exponents and solve.
 
-\begin{enumerate}[resume]
+\begin{qtwocol}
   \item Solve $2^x = 32$.
   \qspace
   \item Solve $5^x = \dfrac{1}{25}$.
   \qspace
   \item Solve $3^{2x-1} = 27$.
   \qspace
-  \item Solve $2^{3x+1} \times 8^{2x+8} = 2^{25}$. (Use your answer to Question 19.)
+  \item Solve $4^{x} = 256$.
   \qspace
-\end{enumerate}
-
-\end{multicols}
+  \item Solve $2^{x-1} = \dfrac{1}{8}$.
+  \qspace
+  \item Solve $2^{3x+1} \times 8^{2x+8} = 2^{25}$. (Use your answer to Question 25.)
+  \qspace
+\end{qtwocol}
 
 \newpage
 \section{Problem Solving}
 
-\noindent Many exponential equations are not immediately ready to solve. First \textbf{rearrange} the equation so the exponential term is on its own (or combine mixed bases into a single power), then rewrite both sides with the same base, then equate exponents and solve.
+\noindent Many exponential equations are not immediately ready to solve. First \textbf{rearrange} the equation so the exponential term is on its own, then rewrite both sides with the same base, then equate exponents and solve.
 
-\begin{multicols}{2}
-
-\begin{enumerate}
+\subsection*{Rearranging to a common base}
+\begin{qtwocolstart}
   \item Solve $3^x + 5 = 14$.
   \qspace
 
@@ -155,28 +173,14 @@ Once both sides are written as a power of the same base, equate the exponents an
   \item Solve $9^x = 3^{x+4}$. (Both sides are already exponential --- rewrite the left-hand side using base 3 before equating exponents.)
   \qspace
 
-  \item Solve $2^{x+2} \times 4^{x-1} = 512$.
-  \qspace
-
-  \item Solve $\dfrac{9^{x+1}}{3^{x-2}} = 81$.
-  \qspace
-
-  \item Solve $3 \times 2^{x+1} - 5 = 43$.
-  \qspace
-
-  \item Solve $100 - 5^{x} = 75$.
-  \qspace
-
   \item Solve $3^{x+3} \times 3^{2x} = 9^{x+4}$.
   \qspace
-\end{enumerate}
-
-\columnbreak
+\end{qtwocolstart}
 
 \subsection*{Leaving your answer in terms of $k$}
 In these problems, $k$ is a fixed but unspecified number. Solve for $x$ as usual, leaving your final answer as an expression in terms of $k$.
 
-\begin{enumerate}[resume]
+\begin{qtwocol}
   \item Solve $3^{2x-1} = 3^{k+5}$ for $x$ in terms of $k$.
   \qspace
 
@@ -188,14 +192,16 @@ In these problems, $k$ is a fixed but unspecified number. Solve for $x$ as usual
 
   \item Solve $\dfrac{8^{x+1}}{2^{x-3}} = 2^{k}$ for $x$ in terms of $k$.
   \qspace
-\end{enumerate}
 
-\end{multicols}
+  \item Solve $9^{x} = 3^{k+4}$ for $x$ in terms of $k$.
+  \qspace
+
+  \item Solve $\dfrac{2^{x+5}}{4^{x-1}} = 2^{k}$ for $x$ in terms of $k$.
+  \qspace
+\end{qtwocol}
 
 \newpage
 \section{Enrichment}
-
-\begin{multicols}{2}
 
 \subsection*{Factoring out a separate prime}
 When a base is a product of two primes (such as $6 = 2 \times 3$), dividing by a power of one of those primes can leave a power of the other. For example,
@@ -203,7 +209,7 @@ When a base is a product of two primes (such as $6 = 2 \times 3$), dividing by a
   \frac{6^{x+3}}{3^{x+3}} = \left(\frac{6}{3}\right)^{x+3} = 2^{x+3}.
 \]
 
-\begin{enumerate}
+\begin{qtwocolstart}
   \item Use this idea to solve: $\dfrac{6^{x+3}}{3^{x+3}} = 2^{5x+1}$.
   \qspace
 
@@ -218,11 +224,13 @@ When a base is a product of two primes (such as $6 = 2 \times 3$), dividing by a
 
   \item Solve: $\dfrac{21^{x}}{7^{x}} = 3^{2x-8}$.
   \qspace
-\end{enumerate}
 
-\columnbreak
+  \item Solve: $\dfrac{33^{x-1}}{11^{x-1}} = 3^{2x+1}$.
+  \qspace
+\end{qtwocolstart}
 
 \subsection*{All skills at once}
+
 \begin{enumerate}[resume]
   \item Consider the equation
   \[
@@ -248,6 +256,12 @@ When a base is a product of two primes (such as $6 = 2 \times 3$), dividing by a
   \qspace
 \end{enumerate}
 
-\end{multicols}
+\subsection*{Challenge}
+No scaffolding this time --- decide for yourself how to simplify this equation before you try to solve it.
+
+\begin{enumerate}[resume]
+  \item Solve for $x$: \quad $2^{x+3} \times 3^{x+1} = 2^{5} \times 3^{2x-1}$.
+  \qspace
+\end{enumerate}
 
 \end{document}
