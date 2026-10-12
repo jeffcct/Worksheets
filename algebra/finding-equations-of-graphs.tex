@@ -57,8 +57,8 @@
 \noindent $y = mx+c$ (linear, from the gradient and $y$-intercept) \quad\(\cdot\)\quad
 $y=a(x-h)^2+k$ (quadratic, from the turning point $(h,k)$) \quad\(\cdot\)\quad
 $y=a(x-p)(x-q)$ (quadratic, from the $x$-intercepts $p,q$).
-Find any unknown constant by substituting the extra marked point, then write the full equation.
-Coordinates are written out for Questions 1--4; for Questions 5--10, each point sits exactly on a grid intersection, so read its coordinates from the grid.
+A $y$-intercept, $x$-intercept, or turning point is \textbf{not} marked with a dot --- read it directly from where the graph crosses or turns on the grid. Only the \emph{extra} point needed to find $a$ (or the gradient) is marked with a dot. Find any unknown constant by substituting that point, then write the full equation.
+Coordinates are written out for Questions 1--4; for Questions 5--10, the marked point sits exactly on a grid intersection, so read its coordinates from the grid.
 
 \vspace{0.3em}
 
@@ -70,7 +70,6 @@ Coordinates are written out for Questions 1--4; for Questions 5--10, each point 
 \begin{tikzpicture}
 \graphaxis{-1}{5}{-1}{13}{1}
 \addplot[domain=-1:5, samples=2, thick, blue] {2*x+3};
-\markpt{0}{3}{above right}
 \markpt{4}{11}{above left}
 \end{axis}
 \end{tikzpicture}
@@ -82,7 +81,6 @@ Coordinates are written out for Questions 1--4; for Questions 5--10, each point 
 \begin{tikzpicture}
 \graphaxis{-1}{5}{-3}{8}{1}
 \addplot[domain=-1:5, samples=60, thick, red] {2*(x-2)^2-1};
-\markpt{2}{-1}{below right}
 \markpt{3}{1}{above right}
 \end{axis}
 \end{tikzpicture}
@@ -94,8 +92,6 @@ Coordinates are written out for Questions 1--4; for Questions 5--10, each point 
 \begin{tikzpicture}
 \graphaxis{-2}{8}{-9}{13}{1}
 \addplot[domain=-2:8, samples=60, thick, purple] {2*(x-1)*(x-5)};
-\markpt{1}{0}{below left}
-\markpt{5}{0}{below right}
 \markpt{0}{10}{right}
 \end{axis}
 \end{tikzpicture}
@@ -121,7 +117,6 @@ Coordinates are written out for Questions 1--4; for Questions 5--10, each point 
 \begin{tikzpicture}
 \graphaxis{-4}{3}{-6}{6}{1}
 \addplot[domain=-4:3, samples=60, thick, red] {-2*(x+1)^2+4};
-\dotpt{-1}{4}
 \dotpt{1}{-4}
 \end{axis}
 \end{tikzpicture}
@@ -133,8 +128,6 @@ Coordinates are written out for Questions 1--4; for Questions 5--10, each point 
 \begin{tikzpicture}
 \graphaxis{-5}{6}{-20}{23}{1}
 \addplot[domain=-5:6, samples=60, thick, purple] {3*(x+2)*(x-3)};
-\dotpt{-2}{0}
-\dotpt{3}{0}
 \dotpt{4}{18}
 \end{axis}
 \end{tikzpicture}
@@ -146,8 +139,6 @@ Coordinates are written out for Questions 1--4; for Questions 5--10, each point 
 \begin{tikzpicture}
 \graphaxis{-1}{6}{-9}{4}{1}
 \addplot[domain=-1:6, samples=2, thick, blue] {2*x-8};
-\dotpt{4}{0}
-\dotpt{0}{-8}
 \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -158,7 +149,6 @@ Coordinates are written out for Questions 1--4; for Questions 5--10, each point 
 \begin{tikzpicture}
 \graphaxis{-1}{6}{0}{15}{1}
 \addplot[domain=-1:6, samples=60, thick, red] {3*(x-3)^2+2};
-\dotpt{3}{2}
 \dotpt{4}{5}
 \end{axis}
 \end{tikzpicture}
@@ -170,9 +160,6 @@ Coordinates are written out for Questions 1--4; for Questions 5--10, each point 
 \begin{tikzpicture}
 \graphaxis{-3}{7}{-6}{6}{1}
 \addplot[domain=-3:7, samples=60, thick, purple] {-x*(x-4)};
-\dotpt{0}{0}
-\dotpt{4}{0}
-\dotpt{2}{4}
 \end{axis}
 \end{tikzpicture}
 \end{center}
