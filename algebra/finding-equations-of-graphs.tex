@@ -28,6 +28,8 @@
 
 % \markpt{x}{y}{anchor} draws a dot at (x,y) and labels it with its coordinates
 \newcommand{\markpt}[3]{\filldraw (axis cs:#1,#2) circle (1.5pt); \node[#3, font=\small] at (axis cs:#1,#2) {$(#1,#2)$};}
+% \dotpt{x}{y} draws a dot at (x,y) with no label -- read the coordinates from the grid
+\newcommand{\dotpt}[2]{\filldraw (axis cs:#1,#2) circle (1.5pt);}
 
 \newcommand{\graphaxis}[5]{%
   \begin{axis}[
@@ -56,6 +58,7 @@
 $y=a(x-h)^2+k$ (quadratic, from the turning point $(h,k)$) \quad\(\cdot\)\quad
 $y=a(x-p)(x-q)$ (quadratic, from the $x$-intercepts $p,q$).
 Find any unknown constant by substituting the extra marked point, then write the full equation.
+Coordinates are written out for Questions 1--4; for Questions 5--10, each point sits exactly on a grid intersection, so read its coordinates from the grid.
 
 \vspace{0.3em}
 
@@ -118,8 +121,8 @@ Find any unknown constant by substituting the extra marked point, then write the
 \begin{tikzpicture}
 \graphaxis{-4}{3}{-6}{6}{1}
 \addplot[domain=-4:3, samples=60, thick, red] {-2*(x+1)^2+4};
-\markpt{-1}{4}{right}
-\markpt{1}{-4}{below right}
+\dotpt{-1}{4}
+\dotpt{1}{-4}
 \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -130,9 +133,9 @@ Find any unknown constant by substituting the extra marked point, then write the
 \begin{tikzpicture}
 \graphaxis{-5}{6}{-20}{23}{1}
 \addplot[domain=-5:6, samples=60, thick, purple] {3*(x+2)*(x-3)};
-\markpt{-2}{0}{below left}
-\markpt{3}{0}{below right}
-\markpt{4}{18}{left}
+\dotpt{-2}{0}
+\dotpt{3}{0}
+\dotpt{4}{18}
 \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -143,8 +146,8 @@ Find any unknown constant by substituting the extra marked point, then write the
 \begin{tikzpicture}
 \graphaxis{-1}{6}{-9}{4}{1}
 \addplot[domain=-1:6, samples=2, thick, blue] {2*x-8};
-\markpt{4}{0}{above left}
-\markpt{0}{-8}{above right}
+\dotpt{4}{0}
+\dotpt{0}{-8}
 \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -155,8 +158,8 @@ Find any unknown constant by substituting the extra marked point, then write the
 \begin{tikzpicture}
 \graphaxis{-1}{6}{0}{15}{1}
 \addplot[domain=-1:6, samples=60, thick, red] {3*(x-3)^2+2};
-\markpt{3}{2}{below right}
-\markpt{4}{5}{above right}
+\dotpt{3}{2}
+\dotpt{4}{5}
 \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -167,9 +170,9 @@ Find any unknown constant by substituting the extra marked point, then write the
 \begin{tikzpicture}
 \graphaxis{-3}{7}{-6}{6}{1}
 \addplot[domain=-3:7, samples=60, thick, purple] {-x*(x-4)};
-\markpt{0}{0}{above left}
-\markpt{4}{0}{above right}
-\markpt{2}{4}{above}
+\dotpt{0}{0}
+\dotpt{4}{0}
+\dotpt{2}{4}
 \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -181,9 +184,7 @@ Find any unknown constant by substituting the extra marked point, then write the
 \graphaxis{-7}{2}{-1}{7}{1}
 \addplot[domain=-7:2, samples=2, thick, blue] {-0.5*x+3};
 \draw[gray] (axis cs:-4,5) -- (axis cs:0,5) -- (axis cs:0,3);
-\node[above, font=\small] at (axis cs:-2,5) {$4$};
-\node[right, font=\small] at (axis cs:0,4) {$-2$};
-\markpt{-4}{5}{above}
+\dotpt{-4}{5}
 \end{axis}
 \end{tikzpicture}
 \end{center}
