@@ -29,16 +29,21 @@
 \newcommand{\ans}{\hrulefill}
 \newcommand{\anshere}{\par\vspace{0.2em}\noindent\ans\par\vspace{0.2em}}
 \newcommand{\ansprose}{\par\vspace{0.2em}\noindent\ans\par\vspace{0.4em}\noindent\ans\par\vspace{0.2em}}
-% #1 = top-left row label, #2 = bottom-left row label, #3 = number of data
-% columns, #4 = comma list of #3 header values (use {} for a blank header).
+% #1 = top-left row label, #2 = bottom-left row label, #3 = N, the number of
+% data columns, #4 = comma list of N header values (use {} for blank),
+% #5 = M <= N, how many of the LEADING columns are consecutive terms (the
+% diff/ratio row only covers these -- a trailing "big jump" column, if any,
+% is excluded since it is not one step from its neighbour), #6 = comma list
+% of N data-row values, {} for a blank cell, a number to pre-fill it.
 % Draws the value table, then a row of boxes offset by half a column and
 % tied to the table above by tick marks at each internal column boundary.
-\newcommand{\patterntable}[4]{%
+\newcommand{\patterntable}[6]{%
   \par\noindent\begin{tikzpicture}[line width=0.8pt, baseline=0pt]
     \def\cw{0.85}\def\lw{0.85}\def\rh{0.72}\def\gap{0.32}
     \pgfmathtruncatemacro{\Nn}{#3}
-    \pgfmathtruncatemacro{\Nmo}{\Nn-1}
-    \pgfmathtruncatemacro{\Nmt}{\Nn-2}
+    \pgfmathtruncatemacro{\Mn}{#5}
+    \pgfmathtruncatemacro{\Mmo}{\Mn-1}
+    \pgfmathtruncatemacro{\Mmt}{\Mn-2}
     \draw (0,0) rectangle ({\lw+\Nn*\cw},{2*\rh});
     \draw (0,\rh) -- ({\lw+\Nn*\cw},\rh);
     \draw (\lw,0) -- (\lw,{2*\rh});
@@ -46,9 +51,10 @@
     \node at ({\lw/2},{1.5*\rh}) {#1};
     \node at ({\lw/2},{0.5*\rh}) {#2};
     \foreach \val [count=\i] in {#4} { \node at ({\lw+(\i-0.5)*\cw},{1.5*\rh}) {\val}; }
-    \draw ({\lw+0.5*\cw},{-\gap-\rh}) rectangle ({\lw+(\Nn-0.5)*\cw},{-\gap});
-    \foreach \j in {1,...,\Nmt} { \draw ({\lw+(0.5+\j)*\cw},{-\gap-\rh}) -- ({\lw+(0.5+\j)*\cw},{-\gap}); }
-    \foreach \k in {1,...,\Nmo} { \draw ({\lw+\k*\cw},0) -- ({\lw+\k*\cw},{-\gap}); }
+    \foreach \val [count=\i] in {#6} { \node at ({\lw+(\i-0.5)*\cw},{0.5*\rh}) {\val}; }
+    \draw ({\lw+0.5*\cw},{-\gap-\rh}) rectangle ({\lw+(\Mn-0.5)*\cw},{-\gap});
+    \foreach \j in {1,...,\Mmt} { \draw ({\lw+(0.5+\j)*\cw},{-\gap-\rh}) -- ({\lw+(0.5+\j)*\cw},{-\gap}); }
+    \foreach \k in {1,...,\Mmo} { \draw ({\lw+\k*\cw},0) -- ({\lw+\k*\cw},{-\gap}); }
   \end{tikzpicture}\par\vspace{0.3em}%
 }
 \newcommand{\drawbox}[1]{%
@@ -103,7 +109,7 @@ This pattern shows the number of matchsticks needed to make a row of joined squa
   \drawbox{2.8cm}
   \item Copy and complete the table.
 
-  \patterntable{$S$}{$M$}{7}{{},1,2,3,4,5,12}
+  \patterntable{$S$}{$M$}{7}{{},1,2,3,4,5,12}{6}{{},{},{},{},{},{},{}}
 
   \item Construct a formula for the number of matches ($M$) needed for any number of squares ($S$).
   \anshere
@@ -147,7 +153,7 @@ seat). When two tables are pushed together, the shared side can no longer seat a
   \drawbox{3.0cm}
   \item Copy and complete the table below.
 
-  \patterntable{$T$}{$C$}{7}{{},1,2,3,4,5,25}
+  \patterntable{$T$}{$C$}{7}{{},1,2,3,4,5,25}{6}{{},{},{},{},{},{},{}}
 
   \item Construct a formula for the number of seats ($C$) needed for any number of tables ($T$).
   \anshere
@@ -191,7 +197,7 @@ tower is 1 matchstick wide and 3 matchsticks tall). Neighbouring towers share a 
   \drawbox{3.0cm}
   \item Copy and complete the table.
 
-  \patterntable{$T$}{$M$}{7}{{},1,2,3,4,5,20}
+  \patterntable{$T$}{$M$}{7}{{},1,2,3,4,5,20}{6}{{},{},{},{},{},{},{}}
 
   \item Construct a formula for the number of matches ($M$) needed for any number of towers ($T$).
   \anshere
@@ -228,7 +234,7 @@ so far exactly in half. This pattern is \emph{geometric}, not linear: the number
   \drawbox{2.4cm}
   \item Copy and complete the table below.
 
-  \patterntable{$n$}{$P$}{6}{1,2,3,4,5,7}
+  \patterntable{$n$}{$P$}{6}{1,2,3,4,5,7}{5}{{},{},{},{},{},{}}
 
   \item Construct a formula for the number of pieces ($P$) at stage $n$. (Hint: write a few
     terms as powers of the ratio you found above.)
@@ -254,7 +260,7 @@ A candle is 24~cm tall when it is lit. Every hour it burns down, it loses 4~cm o
 \begin{enumerate}[label=(\alph*)]
   \item Copy and complete the table below, using the words above.
 
-  \patterntable{$h$}{$H$}{6}{{},1,2,3,4,5}
+  \patterntable{$h$}{$H$}{6}{{},1,2,3,4,5}{6}{{},{},{},{},{},{}}
 
   \item Construct a formula for the height ($H$) after $h$ hours.
   \anshere
@@ -262,6 +268,24 @@ A candle is 24~cm tall when it is lit. Every hour it burns down, it loses 4~cm o
   \anshere
   \item Your formula gives a height for $h=8$. Work it out, then explain why this answer
     doesn't make sense for the real candle.
+  \anshere
+\end{enumerate}
+
+\subsection*{Word problem 3}
+
+A water tank holds 500 litres when full. It is draining at a steady rate of 20 litres every
+minute.
+
+\begin{enumerate}[label=(\alph*)]
+  \item Copy and complete the table below, using the words above.
+
+  \patterntable{$t$}{$V$}{6}{{},1,2,3,4,5}{6}{{},{},{},{},{},{}}
+
+  \item Construct a formula for the volume ($V$) remaining after $t$ minutes.
+  \anshere
+  \item How many litres are left after 12 minutes?
+  \anshere
+  \item After how many minutes is the tank completely empty?
   \anshere
 \end{enumerate}
 
@@ -275,7 +299,7 @@ A chess club has 15 members at the start of the year. Every week, 4 new people j
 \begin{enumerate}[label=(\alph*)]
   \item Copy and complete the table below, using the words above.
 
-  \patterntable{$w$}{$M$}{7}{{},1,2,3,4,5,25}
+  \patterntable{$w$}{$M$}{7}{{},1,2,3,4,5,25}{6}{{},{},{},{},{},{},{}}
 
   \item Construct a formula for the number of members ($M$) after $w$ weeks.
   \anshere
@@ -285,97 +309,122 @@ A chess club has 15 members at the start of the year. Every week, 4 new people j
   \anshere
 \end{enumerate}
 
+\subsection*{Word problem 4}
+
+Mia has \$80 saved already. Every week, she adds another \$12 to her savings.
+
+\begin{enumerate}[label=(\alph*)]
+  \item Copy and complete the table below, using the words above.
+
+  \patterntable{$w$}{$S$}{6}{{},1,2,3,4,5}{6}{{},{},{},{},{},{}}
+
+  \item Construct a formula for her savings ($S$) after $w$ weeks.
+  \anshere
+  \item How much would she have saved after 15 weeks?
+  \anshere
+  \item After how many weeks would she have saved \$272?
+  \anshere
+\end{enumerate}
+
 \end{multicols}
 
 \newpage
 
 \begin{multicols}{2}
 
-\section*{Section 6 -- Just the Numbers}
+\section*{Section 6 -- Fit the Numbers}
 
-\subsection*{Pattern A}
+\noindent For each scenario below, only two values are given -- not the starting amount or
+the amount added each time. Work those out first, then fit the rest of the numbers to the
+table.
 
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|}
-  \hline
-  $n$ & 1 & 2 & 3 & 4 & 5 \\
-  \hline
-  $y$ & 5 & 9 & 13 & 17 & 21 \\
-  \hline
-\end{tabular}
-\end{center}
+\subsection*{Scenario A}
+
+A tree is planted in a garden. It grows by the same amount every year. After 2 years it is
+140~cm tall. After 6 years it is 220~cm tall.
 
 \begin{enumerate}[label=(\alph*)]
-  \item Find a formula for $y$ in terms of $n$.
+  \item What is the common difference (the growth per year)?
   \anshere
-  \item Describe a real-life situation this sequence could represent.
-  \ansprose
-  \item Use your formula to find the 15th term.
+  \item Copy and complete the table below (including year 0).
+
+  \patterntable{$y$}{$H$}{7}{{},1,2,3,4,5,6}{7}{{},{},140,{},{},{},220}
+
+  \item Construct a formula for the height ($H$) after $y$ years.
   \anshere
-\end{enumerate}
-
-\subsection*{Pattern B}
-
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|}
-  \hline
-  $n$ & 1 & 2 & 3 & 4 & 5 \\
-  \hline
-  $y$ & 50 & 45 & 40 & 35 & 30 \\
-  \hline
-\end{tabular}
-\end{center}
-
-\begin{enumerate}[label=(\alph*)]
-  \item Find a formula for $y$ in terms of $n$.
+  \item How tall is the tree after 8 years?
   \anshere
-  \item Describe a real-life situation this sequence could represent.
-  \ansprose
-  \item Use your formula to find the 10th term.
+  \item After how many years is the tree 320~cm tall?
   \anshere
 \end{enumerate}
 
 \columnbreak
 
-\subsection*{Pattern C}
+\subsection*{Scenario B}
 
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|}
-  \hline
-  $n$ & 1 & 2 & 3 & 4 & 5 \\
-  \hline
-  $y$ & 3 & 6 & 12 & 24 & 48 \\
-  \hline
-\end{tabular}
-\end{center}
+A gym charges a joining fee plus the same amount for every week of membership. After 2 weeks,
+a member has paid \$115 in total. After 6 weeks, they have paid \$215 in total.
 
 \begin{enumerate}[label=(\alph*)]
-  \item Find a formula for $y$ in terms of $n$.
+  \item What is the common difference (the cost per week)?
   \anshere
-  \item Describe a real-life situation this sequence could represent.
-  \ansprose
-  \item Use your formula to find the 8th term.
+  \item Copy and complete the table below (including week 0).
+
+  \patterntable{$w$}{$C$}{7}{{},1,2,3,4,5,6}{7}{{},{},115,{},{},{},215}
+
+  \item Construct a formula for the total cost ($C$) after $w$ weeks.
+  \anshere
+  \item What would the total cost be after 10 weeks?
+  \anshere
+  \item After how many weeks would the total cost reach \$440?
   \anshere
 \end{enumerate}
 
-\subsection*{Pattern D}
+\end{multicols}
 
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|}
-  \hline
-  $n$ & 1 & 2 & 3 & 4 & 5 \\
-  \hline
-  $y$ & 8 & 8 & 8 & 8 & 8 \\
-  \hline
-\end{tabular}
-\end{center}
+\newpage
+
+\begin{multicols}{2}
+
+\subsection*{Scenario C}
+
+A tank is being filled with water at a steady rate. After 2 minutes it holds 28~litres. After
+6 minutes it holds 76~litres.
 
 \begin{enumerate}[label=(\alph*)]
-  \item Find a formula for $y$ in terms of $n$.
+  \item What is the common difference (the fill rate per minute)?
   \anshere
-  \item Describe a real-life situation this sequence could represent.
-  \ansprose
-  \item Use your formula to find the 20th term.
+  \item Copy and complete the table below (including minute 0).
+
+  \patterntable{$t$}{$V$}{7}{{},1,2,3,4,5,6}{7}{{},{},28,{},{},{},76}
+
+  \item Construct a formula for the volume ($V$) after $t$ minutes.
+  \anshere
+  \item How many litres are in the tank after 10 minutes?
+  \anshere
+  \item After how many minutes does the tank hold 244~litres?
+  \anshere
+\end{enumerate}
+
+\columnbreak
+
+\subsection*{Scenario D}
+
+A candle burns down at a steady rate. After 2 hours it is 30~cm tall. After 6 hours it is
+10~cm tall.
+
+\begin{enumerate}[label=(\alph*)]
+  \item What is the common difference (the height lost per hour)?
+  \anshere
+  \item Copy and complete the table below (including hour 0).
+
+  \patterntable{$h$}{$H$}{7}{{},1,2,3,4,5,6}{7}{{},{},30,{},{},{},10}
+
+  \item Construct a formula for the height ($H$) after $h$ hours.
+  \anshere
+  \item How tall is the candle after 7 hours?
+  \anshere
+  \item After how many hours has the candle completely burnt out?
   \anshere
 \end{enumerate}
 
