@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=1.4cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{enumitem}
@@ -7,9 +7,13 @@
 \usepackage{xcolor}
 \usepackage{fancyhdr}
 \usepackage{tikz}
+\usepackage{multicol}
 \usetikzlibrary{arrows.meta,positioning}
 \usepackage{array}
-\usepackage{makecell}
+
+\setlength{\columnsep}{0.8cm}
+\setlength{\columnseprule}{0.4pt}
+\renewcommand{\arraystretch}{1.3}
 
 \pagestyle{fancy}
 \setlength{\headheight}{14pt}
@@ -19,21 +23,19 @@
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\titleformat{\section}{\large\bfseries\color{blue!50!black}}{\thesection}{0.6em}{}
-\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titleformat{\section}{\normalsize\bfseries\color{blue!50!black}}{\thesection}{0.5em}{}
 
 \newcommand{\ans}{\hrulefill}
-\newcommand{\anshere}{\par\vspace{0.3em}\noindent\ans\par\vspace{0.3em}}
+\newcommand{\anshere}{\par\vspace{0.2em}\noindent\ans\par\vspace{0.2em}}
 \newcommand{\drawbox}[1]{%
   \par\noindent\fbox{%
     \begin{minipage}[t][#1][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule}
-      \vspace{0.2em}\hspace{0.2em}\textit{\small Draw your pattern here.}
+      \vspace{0.15em}\hspace{0.15em}\textit{\scriptsize Draw your pattern here.}
     \end{minipage}%
   }\par%
 }
 
-\setlist[enumerate,1]{leftmargin=1.6em}
-\setlist[enumerate,2]{leftmargin=2.2em}
+\setlist[enumerate,1]{leftmargin=1.4em,itemsep=6pt,topsep=5pt,parsep=0pt,partopsep=0pt}
 
 \title{\vspace{-1.5cm}Linear Number Patterns -- Extra Practice}
 \author{}
@@ -49,50 +51,44 @@ step, so the number of items follows a linear rule. For each question:
 (a) draw the next pattern, (b) complete the table, (c) find a formula, then (d)--(e) use your
 formula to answer questions about much larger patterns.
 
+\begin{multicols}{2}
+
 \section*{Question 1 -- Matchstick Squares}
 
 This pattern shows the number of matchsticks needed to make a row of joined squares.
 
-\begin{center}
-\begin{tikzpicture}[scale=0.9, line width=1pt]
-  % Pattern 1: 1 square
+\noindent\textbf{1:}\;\begin{tikzpicture}[scale=0.78, line width=0.9pt, baseline=-0.5ex]
   \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
   \foreach \p in {(0,0),(1,0),(1,1),(0,1)} \fill \p circle (2.2pt);
-
-  % Pattern 2: 2 squares
-  \begin{scope}[xshift=2.6cm]
-    \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
-    \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
-    \foreach \p in {(0,0),(1,0),(2,0),(0,1),(1,1),(2,1)} \fill \p circle (2.2pt);
-  \end{scope}
-
-  % Pattern 3: 3 squares
-  \begin{scope}[xshift=6.2cm]
-    \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
-    \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
-    \draw (2,0) -- (3,0) -- (3,1) -- (2,1);
-    \foreach \p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1)} \fill \p circle (2.2pt);
-  \end{scope}
+\end{tikzpicture}\\[3pt]
+\textbf{2:}\;\begin{tikzpicture}[scale=0.78, line width=0.9pt, baseline=-0.5ex]
+  \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
+  \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
+  \foreach \p in {(0,0),(1,0),(2,0),(0,1),(1,1),(2,1)} \fill \p circle (2.2pt);
+\end{tikzpicture}\\[3pt]
+\textbf{3:}\;\begin{tikzpicture}[scale=0.78, line width=0.9pt, baseline=-0.5ex]
+  \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
+  \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
+  \draw (2,0) -- (3,0) -- (3,1) -- (2,1);
+  \foreach \p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1)} \fill \p circle (2.2pt);
 \end{tikzpicture}
-\end{center}
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (4 squares in a row).
-  \drawbox{3.2cm}
-  \item Copy and complete the following table.
+  \drawbox{2.8cm}
+  \item Copy and complete the table.
 
   \begin{center}
-  \renewcommand{\arraystretch}{1.3}
-  \begin{tabular}{|l|c|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
-    Number of squares ($S$) & 1 & 2 & 3 & 4 & 5 & 12 \\
+    $S$ & 1 & 2 & 3 & 4 & 5 & 12 \\
     \hline
-    Number of matches ($M$) & & & & & & \\
+    $M$ & & & & & & \\
     \hline
   \end{tabular}
   \end{center}
 
-  \item Construct a formula to find the number of matches needed for any number of squares.
+  \item Construct a formula for the number of matches ($M$) needed for any number of squares ($S$).
   \anshere
   \item If a row had 40 squares, how many matches would be needed?
   \anshere
@@ -100,56 +96,51 @@ This pattern shows the number of matchsticks needed to make a row of joined squa
   \anshere
 \end{enumerate}
 
+\columnbreak
+
 \section*{Question 2 -- Hexagonal Picnic Tables}
 
 A campsite joins hexagonal picnic tables end to end in a row, as shown below (each dot is a
 seat). When two tables are pushed together, the shared side can no longer seat anyone.
 
-\begin{center}
-\begin{tikzpicture}[scale=0.8, line width=1pt]
-  \def\hex{(0.5,0) -- (1.5,0) -- (2,0.87) -- (1.5,1.73) -- (0.5,1.73) -- (0,0.87) -- cycle}
-
-  % Pattern 1: 1 hexagon, all 6 seats shown
-  \draw \hex;
-  \foreach \p in {(0.5,0),(1.5,0),(2,0.87),(1.5,1.73),(0.5,1.73),(0,0.87)} \fill \p circle (2.2pt);
-
-  % Pattern 2: 2 hexagons joined, shared side has no seats
-  \begin{scope}[xshift=3.6cm]
-    \draw (0.5,0) -- (1.5,0) -- (2,0.87) -- (1.5,1.73) -- (0.5,1.73) -- (0,0.87) -- cycle;
-    \draw (2,0.87) -- (2.5,1.73) -- (3.5,1.73) -- (4,0.87) -- (3.5,0) -- (1.5,0);
-    \foreach \p in {(0.5,0),(0,0.87),(0.5,1.73),(1.5,1.73),(2.5,1.73),(1.5,0),(3.5,0),(4,0.87),(3.5,1.73)}
-      \fill \p circle (2.2pt);
-  \end{scope}
-
-  % Pattern 3: 3 hexagons joined
-  \begin{scope}[xshift=9.0cm]
-    \draw (0.5,0) -- (1.5,0) -- (2,0.87) -- (1.5,1.73) -- (0.5,1.73) -- (0,0.87) -- cycle;
-    \draw (2,0.87) -- (2.5,1.73) -- (3.5,1.73) -- (4,0.87) -- (3.5,0) -- (1.5,0);
-    \draw (4,0.87) -- (4.5,1.73) -- (5.5,1.73) -- (6,0.87) -- (5.5,0) -- (3.5,0);
-    \foreach \p in {(0.5,0),(0,0.87),(0.5,1.73),(1.5,1.73),(2.5,1.73),(3.5,1.73),
-                    (4.5,1.73),(5.5,1.73),(1.5,0),(3.5,0),(5.5,0),(6,0.87)}
-      \fill \p circle (2.2pt);
-  \end{scope}
+\noindent\textbf{1:}\;\begin{tikzpicture}[scale=0.60, line width=0.9pt, baseline=-0.5ex]
+  \draw (0.87,0.5) -- (0,1) -- (-0.87,0.5) -- (-0.87,-0.5) -- (0,-1) -- (0.87,-0.5) -- cycle;
+  \foreach \p in {(0.43,0.75),(-0.43,0.75),(-0.87,0),(-0.43,-0.75),(0.43,-0.75),(0.87,0)}
+    \fill \p circle (2pt);
+\end{tikzpicture}\\[3pt]
+\textbf{2:}\;\begin{tikzpicture}[scale=0.60, line width=0.9pt, baseline=-0.5ex]
+  \draw (0.87,0.5) -- (0,1) -- (-0.87,0.5) -- (-0.87,-0.5) -- (0,-1) -- (0.87,-0.5) -- cycle;
+  \draw (2.6,0.5) -- (1.73,1) -- (0.87,0.5) -- (0.87,-0.5) -- (1.73,-1) -- (2.6,-0.5) -- cycle;
+  \foreach \p in {(0.43,0.75),(-0.43,0.75),(-0.87,0),(-0.43,-0.75),(0.43,-0.75),
+                  (2.16,0.75),(1.30,0.75),(1.30,-0.75),(2.16,-0.75),(2.6,0)}
+    \fill \p circle (2pt);
+\end{tikzpicture}\\[3pt]
+\textbf{3:}\;\begin{tikzpicture}[scale=0.60, line width=0.9pt, baseline=-0.5ex]
+  \draw (0.87,0.5) -- (0,1) -- (-0.87,0.5) -- (-0.87,-0.5) -- (0,-1) -- (0.87,-0.5) -- cycle;
+  \draw (2.6,0.5) -- (1.73,1) -- (0.87,0.5) -- (0.87,-0.5) -- (1.73,-1) -- (2.6,-0.5) -- cycle;
+  \draw (4.33,0.5) -- (3.46,1) -- (2.6,0.5) -- (2.6,-0.5) -- (3.46,-1) -- (4.33,-0.5) -- cycle;
+  \foreach \p in {(0.43,0.75),(-0.43,0.75),(-0.87,0),(-0.43,-0.75),(0.43,-0.75),
+                  (2.16,0.75),(1.30,0.75),(1.30,-0.75),(2.16,-0.75),
+                  (3.89,0.75),(3.03,0.75),(3.03,-0.75),(3.89,-0.75),(4.33,0)}
+    \fill \p circle (2pt);
 \end{tikzpicture}
-\end{center}
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (4 hexagonal tables joined in a row).
-  \drawbox{3.6cm}
+  \drawbox{3.0cm}
   \item Copy and complete the table below.
 
   \begin{center}
-  \renewcommand{\arraystretch}{1.3}
-  \begin{tabular}{|l|c|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
-    Number of tables ($T$) & 1 & 2 & 3 & 4 & 5 & 25 \\
+    $T$ & 1 & 2 & 3 & 4 & 5 & 25 \\
     \hline
-    Number of seats ($C$) & & & & & & \\
+    $C$ & & & & & & \\
     \hline
   \end{tabular}
   \end{center}
 
-  \item Construct a formula for the number of seats needed for any number of tables.
+  \item Construct a formula for the number of seats ($C$) needed for any number of tables ($T$).
   \anshere
   \item If the campsite joined 40 tables in a row, how many seats would there be?
   \anshere
@@ -158,60 +149,56 @@ seat). When two tables are pushed together, the shared side can no longer seat a
   \anshere
 \end{enumerate}
 
+\end{multicols}
+
 \newpage
+
+\begin{multicols}{2}
 
 \section*{Question 3 -- Matchstick Houses}
 
 This pattern shows the number of matchsticks needed to make a row of joined ``houses'' (a
 square with a triangular roof). Neighbouring houses share one wall.
 
-\begin{center}
-\begin{tikzpicture}[scale=0.85, line width=1pt]
-  % Pattern 1: 1 house
+\noindent\textbf{1:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
   \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
   \draw (0,1) -- (0.5,1.6) -- (1,1);
   \foreach \p in {(0,0),(1,0),(1,1),(0,1),(0.5,1.6)} \fill \p circle (2.2pt);
-
-  % Pattern 2: 2 houses, shared wall
-  \begin{scope}[xshift=2.6cm]
-    \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
-    \draw (0,1) -- (0.5,1.6) -- (1,1);
-    \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
-    \draw (1,1) -- (1.5,1.6) -- (2,1);
-    \foreach \p in {(0,0),(1,0),(2,0),(0,1),(1,1),(2,1),(0.5,1.6),(1.5,1.6)} \fill \p circle (2.2pt);
-  \end{scope}
-
-  % Pattern 3: 3 houses
-  \begin{scope}[xshift=6.6cm]
-    \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
-    \draw (0,1) -- (0.5,1.6) -- (1,1);
-    \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
-    \draw (1,1) -- (1.5,1.6) -- (2,1);
-    \draw (2,0) -- (3,0) -- (3,1) -- (2,1);
-    \draw (2,1) -- (2.5,1.6) -- (3,1);
-    \foreach \p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1),(0.5,1.6),(1.5,1.6),(2.5,1.6)}
-      \fill \p circle (2.2pt);
-  \end{scope}
+\end{tikzpicture}\\[3pt]
+\textbf{2:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
+  \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
+  \draw (0,1) -- (0.5,1.6) -- (1,1);
+  \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
+  \draw (1,1) -- (1.5,1.6) -- (2,1);
+  \foreach \p in {(0,0),(1,0),(2,0),(0,1),(1,1),(2,1),(0.5,1.6),(1.5,1.6)} \fill \p circle (2.2pt);
+\end{tikzpicture}\\[3pt]
+\textbf{3:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
+  \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
+  \draw (0,1) -- (0.5,1.6) -- (1,1);
+  \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
+  \draw (1,1) -- (1.5,1.6) -- (2,1);
+  \draw (2,0) -- (3,0) -- (3,1) -- (2,1);
+  \draw (2,1) -- (2.5,1.6) -- (3,1);
+  \foreach \p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1),(0.5,1.6),(1.5,1.6),(2.5,1.6)}
+    \fill \p circle (2.2pt);
 \end{tikzpicture}
-\end{center}
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (4 houses in a row).
-  \drawbox{3.6cm}
-  \item Copy and complete the following table.
+  \drawbox{3.0cm}
+  \item Copy and complete the table.
 
   \begin{center}
-  \renewcommand{\arraystretch}{1.3}
-  \begin{tabular}{|l|c|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
-    Number of houses ($H$) & 1 & 2 & 3 & 4 & 5 & 15 \\
+    $H$ & 1 & 2 & 3 & 4 & 5 & 15 \\
     \hline
-    Number of matches ($M$) & & & & & & \\
+    $M$ & & & & & & \\
     \hline
   \end{tabular}
   \end{center}
 
-  \item Construct a formula to find the number of matches needed for any number of houses.
+  \item Construct a formula for the number of matches ($M$) needed for any number of houses ($H$).
   \anshere
   \item If a row had 50 houses, how many matches would be needed?
   \anshere
@@ -219,65 +206,61 @@ square with a triangular roof). Neighbouring houses share one wall.
   \anshere
 \end{enumerate}
 
+\columnbreak
+
 \section*{Question 4 -- Garden Fencing}
 
 A fence is built from posts with two horizontal rails running between each pair of neighbouring
 posts, as shown below.
 
-\begin{center}
-\begin{tikzpicture}[scale=0.85, line width=1pt]
-  % Pattern 1: 2 posts, 1 gap
+\noindent\textbf{1:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
   \foreach \x in {0,1} {
     \draw (\x,0) -- (\x,1.4);
     \fill (\x,1.4) circle (2.2pt);
   }
   \draw (0,0.4) -- (1,0.4);
   \draw (0,1.0) -- (1,1.0);
-
-  % Pattern 2: 3 posts, 2 gaps
-  \begin{scope}[xshift=3.0cm]
-    \foreach \x in {0,1,2} {
-      \draw (\x,0) -- (\x,1.4);
-      \fill (\x,1.4) circle (2.2pt);
-    }
-    \draw (0,0.4) -- (2,0.4);
-    \draw (0,1.0) -- (2,1.0);
-  \end{scope}
-
-  % Pattern 3: 4 posts, 3 gaps
-  \begin{scope}[xshift=7.0cm]
-    \foreach \x in {0,1,2,3} {
-      \draw (\x,0) -- (\x,1.4);
-      \fill (\x,1.4) circle (2.2pt);
-    }
-    \draw (0,0.4) -- (3,0.4);
-    \draw (0,1.0) -- (3,1.0);
-  \end{scope}
+\end{tikzpicture}\\[3pt]
+\textbf{2:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
+  \foreach \x in {0,1,2} {
+    \draw (\x,0) -- (\x,1.4);
+    \fill (\x,1.4) circle (2.2pt);
+  }
+  \draw (0,0.4) -- (2,0.4);
+  \draw (0,1.0) -- (2,1.0);
+\end{tikzpicture}\\[3pt]
+\textbf{3:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
+  \foreach \x in {0,1,2,3} {
+    \draw (\x,0) -- (\x,1.4);
+    \fill (\x,1.4) circle (2.2pt);
+  }
+  \draw (0,0.4) -- (3,0.4);
+  \draw (0,1.0) -- (3,1.0);
 \end{tikzpicture}
-\end{center}
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (5 posts).
-  \drawbox{3.0cm}
+  \drawbox{2.8cm}
   \item Copy and complete the table below.
 
   \begin{center}
-  \renewcommand{\arraystretch}{1.3}
-  \begin{tabular}{|l|c|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
     \hline
-    Number of posts ($P$) & 2 & 3 & 4 & 5 & 6 & 7 \\
+    $P$ & 2 & 3 & 4 & 5 & 6 & 7 \\
     \hline
-    Number of rails ($R$) & & & & & & \\
+    $R$ & & & & & & \\
     \hline
   \end{tabular}
   \end{center}
 
-  \item Construct a formula for the number of rails needed for any number of posts.
+  \item Construct a formula for the number of rails ($R$) needed for any number of posts ($P$).
   \anshere
   \item If a fence had 50 posts, how many rails would be needed?
   \anshere
   \item If a fence used 200 rails, how many posts would it have?
   \anshere
 \end{enumerate}
+
+\end{multicols}
 
 \end{document}
