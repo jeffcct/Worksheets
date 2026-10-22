@@ -27,7 +27,9 @@
 
 \newcommand{\ans}{\hrulefill}
 \newcommand{\anshere}{\par\vspace{0.2em}\noindent\ans\par\vspace{0.2em}}
-\newcommand{\diffline}{\par\vspace{0.3em}\noindent\textbf{Difference between each pattern:}\;\ans\par\vspace{0.3em}}
+\newcommand{\diffspace}{\par\vspace{0.3em}\noindent\textbf{Difference:}\;%
+  \underline{\hspace{0.55cm}}\;\underline{\hspace{0.55cm}}\;\underline{\hspace{0.55cm}}\;%
+  \underline{\hspace{0.55cm}}\;\underline{\hspace{0.55cm}}\par\vspace{0.3em}}
 \newcommand{\drawbox}[1]{%
   \par\noindent\fbox{%
     \begin{minipage}[t][#1][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule}
@@ -73,7 +75,6 @@ This pattern shows the number of matchsticks needed to make a row of joined squa
   \draw (2,0) -- (3,0) -- (3,1) -- (2,1);
   \foreach \p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1)} \fill \p circle (2.2pt);
 \end{tikzpicture}
-\diffline
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (4 squares in a row).
@@ -81,14 +82,15 @@ This pattern shows the number of matchsticks needed to make a row of joined squa
   \item Copy and complete the table.
 
   \begin{center}
-  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    $S$ & 1 & 2 & 3 & 4 & 5 & 12 \\
+    $S$ & 0 & 1 & 2 & 3 & 4 & 5 & 12 \\
     \hline
-    $M$ & & & & & & \\
+    $M$ & & & & & & & \\
     \hline
   \end{tabular}
   \end{center}
+  \diffspace
 
   \item Construct a formula for the number of matches ($M$) needed for any number of squares ($S$).
   \anshere
@@ -126,7 +128,6 @@ seat). When two tables are pushed together, the shared side can no longer seat a
                   (3.89,0.75),(3.03,0.75),(3.03,-0.75),(3.89,-0.75),(4.33,0)}
     \fill \p circle (2pt);
 \end{tikzpicture}
-\diffline
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (4 hexagonal tables joined in a row).
@@ -134,14 +135,15 @@ seat). When two tables are pushed together, the shared side can no longer seat a
   \item Copy and complete the table below.
 
   \begin{center}
-  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    $T$ & 1 & 2 & 3 & 4 & 5 & 25 \\
+    $T$ & 0 & 1 & 2 & 3 & 4 & 5 & 25 \\
     \hline
-    $C$ & & & & & & \\
+    $C$ & & & & & & & \\
     \hline
   \end{tabular}
   \end{center}
+  \diffspace
 
   \item Construct a formula for the number of seats ($C$) needed for any number of tables ($T$).
   \anshere
@@ -158,55 +160,46 @@ seat). When two tables are pushed together, the shared side can no longer seat a
 
 \begin{multicols}{2}
 
-\section*{Question 3 -- Matchstick Houses}
+\section*{Question 3 -- Matchstick Mountains}
 
-This pattern shows the number of matchsticks needed to make a row of joined ``houses'' (a
-square with a triangular roof). Neighbouring houses share one wall.
+This pattern shows the number of matchsticks needed to make a zigzag row of ``mountain''
+peaks. Unlike the other patterns, the peaks don't share any matchsticks with each other --
+they just meet at a single point.
 
 \noindent\textbf{1:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
-  \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
-  \draw (0,1) -- (0.5,1.6) -- (1,1);
-  \foreach \p in {(0,0),(1,0),(1,1),(0,1),(0.5,1.6)} \fill \p circle (2.2pt);
+  \draw (0,0) -- (0.5,1) -- (1,0);
+  \foreach \p in {(0,0),(0.5,1),(1,0)} \fill \p circle (2.2pt);
 \end{tikzpicture}\\[3pt]
 \textbf{2:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
-  \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
-  \draw (0,1) -- (0.5,1.6) -- (1,1);
-  \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
-  \draw (1,1) -- (1.5,1.6) -- (2,1);
-  \foreach \p in {(0,0),(1,0),(2,0),(0,1),(1,1),(2,1),(0.5,1.6),(1.5,1.6)} \fill \p circle (2.2pt);
+  \draw (0,0) -- (0.5,1) -- (1,0) -- (1.5,1) -- (2,0);
+  \foreach \p in {(0,0),(0.5,1),(1,0),(1.5,1),(2,0)} \fill \p circle (2.2pt);
 \end{tikzpicture}\\[3pt]
 \textbf{3:}\;\begin{tikzpicture}[scale=0.72, line width=0.9pt, baseline=-0.5ex]
-  \draw (0,0) -- (1,0) -- (1,1) -- (0,1) -- cycle;
-  \draw (0,1) -- (0.5,1.6) -- (1,1);
-  \draw (1,0) -- (2,0) -- (2,1) -- (1,1);
-  \draw (1,1) -- (1.5,1.6) -- (2,1);
-  \draw (2,0) -- (3,0) -- (3,1) -- (2,1);
-  \draw (2,1) -- (2.5,1.6) -- (3,1);
-  \foreach \p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1),(0.5,1.6),(1.5,1.6),(2.5,1.6)}
-    \fill \p circle (2.2pt);
+  \draw (0,0) -- (0.5,1) -- (1,0) -- (1.5,1) -- (2,0) -- (2.5,1) -- (3,0);
+  \foreach \p in {(0,0),(0.5,1),(1,0),(1.5,1),(2,0),(2.5,1),(3,0)} \fill \p circle (2.2pt);
 \end{tikzpicture}
-\diffline
 
 \begin{enumerate}[label=(\alph*)]
-  \item Draw the next pattern (4 houses in a row).
+  \item Draw the next pattern (4 peaks in a row).
   \drawbox{3.0cm}
   \item Copy and complete the table.
 
   \begin{center}
-  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    $H$ & 1 & 2 & 3 & 4 & 5 & 15 \\
+    $N$ & 0 & 1 & 2 & 3 & 4 & 5 & 20 \\
     \hline
-    $M$ & & & & & & \\
+    $M$ & & & & & & & \\
     \hline
   \end{tabular}
   \end{center}
+  \diffspace
 
-  \item Construct a formula for the number of matches ($M$) needed for any number of houses ($H$).
+  \item Construct a formula for the number of matches ($M$) needed for any number of peaks ($N$).
   \anshere
-  \item If a row had 50 houses, how many matches would be needed?
+  \item If a row had 50 peaks, how many matches would be needed?
   \anshere
-  \item If a row had 80 houses, how many matches would be needed?
+  \item If a row had 80 peaks, how many matches would be needed?
   \anshere
 \end{enumerate}
 
@@ -241,7 +234,6 @@ posts, as shown below.
   \draw (0,0.4) -- (3,0.4);
   \draw (0,1.0) -- (3,1.0);
 \end{tikzpicture}
-\diffline
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (5 posts).
@@ -249,14 +241,15 @@ posts, as shown below.
   \item Copy and complete the table below.
 
   \begin{center}
-  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
     \hline
-    $P$ & 2 & 3 & 4 & 5 & 6 & 7 \\
+    $P$ & 0 & 1 & 2 & 3 & 4 & 5 & 6 \\
     \hline
-    $R$ & & & & & & \\
+    $R$ & & & & & & & \\
     \hline
   \end{tabular}
   \end{center}
+  \diffspace
 
   \item Construct a formula for the number of rails ($R$) needed for any number of posts ($P$).
   \anshere
