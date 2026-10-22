@@ -42,10 +42,11 @@
     \pgfmathtruncatemacro{\Mn}{#5}
     \pgfmathtruncatemacro{\Mmo}{\Mn-1}
     \pgfmathtruncatemacro{\Mmt}{\Mn-2}
+    \pgfmathtruncatemacro{\Nmo}{\Nn-1}
     \draw (0,0) rectangle ({\lw+\Nn*\cw},{2*\rh});
     \draw (0,\rh) -- ({\lw+\Nn*\cw},\rh);
     \draw (\lw,0) -- (\lw,{2*\rh});
-    \foreach \i in {1,...,\Nn} { \draw ({\lw+\i*\cw},0) -- ({\lw+\i*\cw},{2*\rh}); }
+    \foreach \i in {1,...,\Nmo} { \draw ({\lw+\i*\cw},0) -- ({\lw+\i*\cw},{2*\rh}); }
     \node at ({\lw/2},{1.5*\rh}) {#1};
     \node at ({\lw/2},{0.5*\rh}) {#2};
     \foreach \val [count=\i] in {#4} { \node at ({\lw+(\i-0.5)*\cw},{1.5*\rh}) {\val}; }
@@ -321,84 +322,7 @@ Mia has \$80 saved already. Every week, she adds another \$12 to her savings.
 \newpage
 
 \begin{multicols}{2}
-
-\subsection*{Word problem 5}
-
-A car park charges \$5 to enter, plus \$3 for every hour parked.
-
-\begin{enumerate}[label=(\alph*)]
-  \item Copy and complete the table below, using the words above.
-
-  \patterntable{$h$}{$C$}{7}{{},1,2,3,4,5,20}{7}{{},{},{},{},{},{},{}}
-
-  \item Construct a formula for the total cost ($C$) after $h$ hours.
-  \anshere
-  \item What would the total cost be after 8 hours?
-  \anshere
-  \item After how many hours would the total cost reach \$50?
-  \anshere
-\end{enumerate}
-
-\subsection*{Word problem 7}
-
-A delivery van is loaded with 60 packages. It drops off 5 packages at every stop.
-
-\begin{enumerate}[label=(\alph*)]
-  \item Copy and complete the table below, using the words above.
-
-  \patterntable{$s$}{$P$}{7}{{},1,2,3,4,5,12}{7}{{},{},{},{},{},{},{}}
-
-  \item Construct a formula for the number of packages ($P$) left after $s$ stops.
-  \anshere
-  \item How many packages are left after 9 stops?
-  \anshere
-  \item After how many stops are there 10 packages left?
-  \anshere
-\end{enumerate}
-
-\columnbreak
-
-\subsection*{Word problem 6}
-
-A hot air balloon is already 8~m above the ground when it starts rising at a steady rate of
-6~m every minute.
-
-\begin{enumerate}[label=(\alph*)]
-  \item Copy and complete the table below, using the words above.
-
-  \patterntable{$m$}{$H$}{7}{{},1,2,3,4,5,15}{7}{{},{},{},{},{},{},{}}
-
-  \item Construct a formula for the height ($H$) after $m$ minutes.
-  \anshere
-  \item How high is the balloon after 9 minutes?
-  \anshere
-  \item After how many minutes does the balloon reach a height of 200~m?
-  \anshere
-\end{enumerate}
-
-\subsection*{Word problem 8}
-
-A runner's heart rate is 70~bpm at rest. During a workout, it increases by 8~bpm for every
-minute of running.
-
-\begin{enumerate}[label=(\alph*)]
-  \item Copy and complete the table below, using the words above.
-
-  \patterntable{$t$}{$R$}{7}{{},1,2,3,4,5,10}{7}{{},{},{},{},{},{},{}}
-
-  \item Construct a formula for the heart rate ($R$) after $t$ minutes of running.
-  \anshere
-  \item What is the heart rate after 7 minutes?
-  \anshere
-  \item After how many minutes does the heart rate reach 190~bpm?
-  \anshere
-\end{enumerate}
-
-\end{multicols}
-
-\newpage
-
-\begin{multicols}{2}
+\small
 
 \section*{Section 6 -- Fit the Numbers}
 
@@ -426,34 +350,6 @@ A tree is planted in a garden. It grows by the same amount every year. After 2 y
   \anshere
 \end{enumerate}
 
-\columnbreak
-
-\subsection*{Scenario B}
-
-A plant grows by the same amount every week. After 2 weeks it is 18~cm tall. After 6 weeks it
-is 42~cm tall.
-
-\begin{enumerate}[label=(\alph*)]
-  \item What is the common difference (the growth per week)?
-  \anshere
-  \item Copy and complete the table below (including week 0).
-
-  \patterntable{$w$}{$H$}{7}{{},1,2,3,4,5,6}{7}{{},{},18,{},{},{},42}
-
-  \item Construct a formula for the height ($H$) after $w$ weeks.
-  \anshere
-  \item How tall is the plant after 9 weeks?
-  \anshere
-  \item After how many weeks is the plant 90~cm tall?
-  \anshere
-\end{enumerate}
-
-\end{multicols}
-
-\newpage
-
-\begin{multicols}{2}
-
 \subsection*{Scenario C}
 
 A gym charges a joining fee plus the same amount for every week of membership. After 2 weeks,
@@ -476,6 +372,26 @@ a member has paid \$115 in total. After 6 weeks, they have paid \$215 in total.
 
 \columnbreak
 
+\subsection*{Scenario B}
+
+A plant grows by the same amount every week. After 2 weeks it is 18~cm tall. After 6 weeks it
+is 42~cm tall.
+
+\begin{enumerate}[label=(\alph*)]
+  \item What is the common difference (the growth per week)?
+  \anshere
+  \item Copy and complete the table below (including week 0).
+
+  \patterntable{$w$}{$H$}{7}{{},1,2,3,4,5,6}{7}{{},{},18,{},{},{},42}
+
+  \item Construct a formula for the height ($H$) after $w$ weeks.
+  \anshere
+  \item How tall is the plant after 9 weeks?
+  \anshere
+  \item After how many weeks is the plant 90~cm tall?
+  \anshere
+\end{enumerate}
+
 \subsection*{Scenario D}
 
 A printer had already printed some pages before you start timing it. After 2 minutes it has
@@ -493,54 +409,6 @@ printed 46 pages in total. After 6 minutes it has printed 86 pages in total.
   \item How many pages have been printed after 9 minutes?
   \anshere
   \item After how many minutes have 226 pages been printed?
-  \anshere
-\end{enumerate}
-
-\end{multicols}
-
-\newpage
-
-\begin{multicols}{2}
-
-\subsection*{Scenario E}
-
-A tank is being filled with water at a steady rate. After 2 minutes it holds 28~litres. After
-6 minutes it holds 76~litres.
-
-\begin{enumerate}[label=(\alph*)]
-  \item What is the common difference (the fill rate per minute)?
-  \anshere
-  \item Copy and complete the table below (including minute 0).
-
-  \patterntable{$t$}{$V$}{7}{{},1,2,3,4,5,6}{7}{{},{},28,{},{},{},76}
-
-  \item Construct a formula for the volume ($V$) after $t$ minutes.
-  \anshere
-  \item How many litres are in the tank after 10 minutes?
-  \anshere
-  \item After how many minutes does the tank hold 244~litres?
-  \anshere
-\end{enumerate}
-
-\columnbreak
-
-\subsection*{Scenario F}
-
-A candle burns down at a steady rate. After 2 hours it is 30~cm tall. After 6 hours it is
-10~cm tall.
-
-\begin{enumerate}[label=(\alph*)]
-  \item What is the common difference (the height lost per hour)?
-  \anshere
-  \item Copy and complete the table below (including hour 0).
-
-  \patterntable{$h$}{$H$}{7}{{},1,2,3,4,5,6}{7}{{},{},30,{},{},{},10}
-
-  \item Construct a formula for the height ($H$) after $h$ hours.
-  \anshere
-  \item How tall is the candle after 7 hours?
-  \anshere
-  \item After how many hours has the candle completely burnt out?
   \anshere
 \end{enumerate}
 
