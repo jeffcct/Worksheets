@@ -27,6 +27,7 @@
 
 \newcommand{\ans}{\hrulefill}
 \newcommand{\anshere}{\par\vspace{0.2em}\noindent\ans\par\vspace{0.2em}}
+\newcommand{\diffline}{\par\vspace{0.3em}\noindent\textbf{Difference between each pattern:}\;\ans\par\vspace{0.3em}}
 \newcommand{\drawbox}[1]{%
   \par\noindent\fbox{%
     \begin{minipage}[t][#1][t]{\dimexpr\linewidth-2\fboxsep-2\fboxrule}
@@ -72,6 +73,7 @@ This pattern shows the number of matchsticks needed to make a row of joined squa
   \draw (2,0) -- (3,0) -- (3,1) -- (2,1);
   \foreach \p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1)} \fill \p circle (2.2pt);
 \end{tikzpicture}
+\diffline
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (4 squares in a row).
@@ -124,6 +126,7 @@ seat). When two tables are pushed together, the shared side can no longer seat a
                   (3.89,0.75),(3.03,0.75),(3.03,-0.75),(3.89,-0.75),(4.33,0)}
     \fill \p circle (2pt);
 \end{tikzpicture}
+\diffline
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (4 hexagonal tables joined in a row).
@@ -182,6 +185,7 @@ square with a triangular roof). Neighbouring houses share one wall.
   \foreach \p in {(0,0),(1,0),(2,0),(3,0),(0,1),(1,1),(2,1),(3,1),(0.5,1.6),(1.5,1.6),(2.5,1.6)}
     \fill \p circle (2.2pt);
 \end{tikzpicture}
+\diffline
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (4 houses in a row).
@@ -237,6 +241,7 @@ posts, as shown below.
   \draw (0,0.4) -- (3,0.4);
   \draw (0,1.0) -- (3,1.0);
 \end{tikzpicture}
+\diffline
 
 \begin{enumerate}[label=(\alph*)]
   \item Draw the next pattern (5 posts).
