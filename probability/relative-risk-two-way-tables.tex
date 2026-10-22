@@ -1,0 +1,202 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.7cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{makecell}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.1em}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Relative Risk from Two-Way Tables}
+\fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\newcommand{\ans}{\hrulefill}
+\newcommand{\anshere}{\par\vspace{0.3em}\noindent\ans\par\vspace{0.3em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.5em, topsep=0.2em}
+\setlist[enumerate,2]{leftmargin=1.3em, itemsep=0.3em, topsep=0.2em}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}p{2.1cm}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{3.1cm}}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries Relative Risk from Two-Way Tables}
+\end{center}
+
+\vspace{0.3em}
+\noindent A \textbf{two-way table} sorts data by two categories at once --- one category down the rows, one across the columns. Each row and column has a \textbf{total}, and the bottom-right cell is the \textbf{grand total} (everyone in the data set).
+
+\vspace{0.5em}
+\section{Two-Way Tables: The Basics}
+\noindent Complete each table, then answer the questions.
+
+\subsection*{1. Favourite subject}
+\noindent 220 students were asked their favourite subject out of Maths, Art and PE.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|Y|}
+\hline
+ & Maths & Art & PE & \textbf{Total} \\\hline
+\textbf{Year 9}  & 45 & 30 & 25 & \\\hline
+\textbf{Year 10} & 35 & 40 & 45 & \\\hline
+\textbf{Total}   &    &    &    & \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item How many Year 10 students chose Art? \ans
+  \item What fraction of all 220 students are in Year 9? \ans
+  \item What percentage of Year 9 students chose PE? \ans
+  \item Of all the students who chose Maths, what fraction are in Year 10? \ans
+\end{enumerate}
+
+\subsection*{2. Pet ownership}
+\noindent Households in an urban and a rural area were asked what pets they own.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|Y|}
+\hline
+ & Dog & Cat & No pet & \textbf{Total} \\\hline
+\textbf{Urban} & 20 & 35 & 45 & \\\hline
+\textbf{Rural} & 50 & 15 & 10 & \\\hline
+\textbf{Total} &    &    &    & \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item How many rural households own a cat? \ans
+  \item What fraction of urban households have no pet? \ans
+  \item What percentage of all households own a dog? \ans
+  \item Of all the households that own a cat, what fraction are rural? \ans
+\end{enumerate}
+
+\newpage
+\section{Relative Risk}
+\noindent In a two-way table about risk, the rows are usually two \textbf{groups} (e.g.\ exposed/not exposed, treated/untreated) and the columns are whether an \textbf{outcome} happened or not.
+\[
+  \text{risk (for a group)} = \dfrac{\text{number in that group \emph{with} the outcome}}{\text{total number in that group}}, \qquad
+  \text{RR} = \dfrac{\text{risk in Group A}}{\text{risk in Group B}}.
+\]
+\noindent Note: risk uses the \textbf{row} total for that group, \emph{not} the grand total. \quad
+If $RR=1$ the risk is the same in both groups; if $RR>1$ Group A has the higher risk; if $RR<1$ Group A has the lower risk.
+
+\vspace{0.3em}
+\noindent For each table below: complete the table, then find the risk for each group, the relative risk, and interpret it.
+
+\subsection*{1. Vaccination and flu}
+\noindent 1000 people took part in a study. 500 received a flu vaccine and 500 did not. The table shows how many of each group caught the flu that winter.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|}
+\hline
+ & Flu & No flu & \textbf{Total} \\\hline
+\textbf{Vaccinated}   & 40  &     & 500 \\\hline
+\textbf{Unvaccinated} & 100 &     & 500 \\\hline
+\textbf{Total}        &     &     &     \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item Risk of flu for the vaccinated group. \ans
+  \item Risk of flu for the unvaccinated group. \ans
+  \item Relative risk of flu for the vaccinated group compared to the unvaccinated group. \ans
+  \item Interpret your answer to part (c) in a sentence.\anshere
+\end{enumerate}
+
+\subsection*{2. Energy drinks and sleep problems}
+\noindent A study of 500 teenagers looked at whether regularly drinking energy drinks is linked to sleep problems.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|}
+\hline
+ & \makecell{Sleep\\problems} & \makecell{No sleep\\problems} & \textbf{Total} \\\hline
+\textbf{Regular energy drink user} & 72 & & 200 \\\hline
+\textbf{Not a regular user}        & 36 & & 300 \\\hline
+\textbf{Total}                     &    & &     \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item Risk of sleep problems for regular energy drink users. \ans
+  \item Risk of sleep problems for people who are not regular users. \ans
+  \item Relative risk of sleep problems for regular users compared to non-users. \ans
+  \item Interpret your answer to part (c) in a sentence.\anshere
+\end{enumerate}
+
+\newpage
+\subsection*{3. Seatbelts and injury}
+\noindent Police records of 1000 car accidents were checked to see whether wearing a seatbelt made a difference to whether a person was injured.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|}
+\hline
+ & Injured & Not injured & \textbf{Total} \\\hline
+\textbf{Wearing a seatbelt}     & 30 & & 600 \\\hline
+\textbf{Not wearing a seatbelt} & 80 & & 400 \\\hline
+\textbf{Total}                  &    & &     \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item Risk of injury for people wearing a seatbelt. \ans
+  \item Risk of injury for people not wearing a seatbelt. \ans
+  \item Relative risk of injury for seatbelt wearers compared to non-wearers. \ans
+  \item Interpret your answer to part (c) in a sentence.\anshere
+\end{enumerate}
+
+\subsection*{4. Exercise and heart disease}
+\noindent 740 adults over 50 were tracked over several years to see whether regular exercise was linked to heart disease.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|}
+\hline
+ & \makecell{Heart\\disease} & \makecell{No heart\\disease} & \textbf{Total} \\\hline
+\textbf{Regular exercise}    & 25 & & 500 \\\hline
+\textbf{No regular exercise} & 60 & & 240 \\\hline
+\textbf{Total}               &    & &     \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item Risk of heart disease for people who exercise regularly. \ans
+  \item Risk of heart disease for people who do not exercise regularly. \ans
+  \item Relative risk of heart disease for the regular-exercise group compared to the no-exercise group. \ans
+  \item Interpret your answer to part (c) in a sentence.\anshere
+\end{enumerate}
+
+\newpage
+\subsection*{5. Sunscreen and sunburn}
+\noindent 400 beachgoers were surveyed about sunscreen use and whether they got sunburnt that day.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|}
+\hline
+ & Sunburn & No sunburn & \textbf{Total} \\\hline
+\textbf{Used sunscreen}    & 15 & & 200 \\\hline
+\textbf{Did not use sunscreen} & 30 & & 200 \\\hline
+\textbf{Total}             &    & &     \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item Risk of sunburn for people who used sunscreen. \ans
+  \item Risk of sunburn for people who did not use sunscreen. \ans
+  \item Relative risk of sunburn for sunscreen users compared to non-users. \ans
+  \item Interpret your answer to part (c) in a sentence.\anshere
+\end{enumerate}
+
+\vspace{0.5em}
+\noindent \textbf{Reflection:} Which of the five tables above show a \emph{protective} factor (one that lowers risk), and which show a factor that \emph{increases} risk? \anshere
+
+\end{document}
