@@ -36,6 +36,7 @@
 \setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.5em, topsep=0.2em}
 \setlength{\columnsep}{1.1cm}
 \setlength{\columnseprule}{0.4pt}
+\raggedcolumns
 
 \begin{document}
 \thispagestyle{firstpage}
@@ -49,6 +50,9 @@
 
 \begin{multicols}{2}
 \subsection*{Expand}
+\noindent\textbf{Worked example:} Expand $2(x+5)$. Multiply everything inside the
+brackets by $2$: $2(x+5) = 2\times x + 2\times 5 = 2x+10$.
+\vspace{0.4em}
 \begin{enumerate}[label=(\alph*)]
   \item $3(x+4)$
   \anshere
@@ -71,6 +75,9 @@
 \columnbreak
 
 \subsection*{Factorise}
+\noindent\textbf{Worked example:} Factorise $8x+20$. The HCF of $8x$ and $20$ is $4$, so
+$8x+20 = 4(2x+5)$.
+\vspace{0.4em}
 \begin{enumerate}[label=(\alph*)]
   \item $4x+12$
   \anshere
@@ -97,6 +104,17 @@
 
 \begin{multicols}{2}
 \subsection*{Expand and simplify}
+\noindent\textbf{Worked example:} Expand and simplify $2(x+4)+3(x-1)$. Expand each
+bracket separately, then collect like terms:
+\[2(x+4)+3(x-1) = 2x+8+3x-3 = 5x+5.\]
+\noindent\textbf{Worked example:} Expand $(x+1)(x+6)$. Multiply each term in the first
+bracket by each term in the second, then collect like terms:
+\begin{align*}
+(x+1)(x+6) &= x\times x + x\times 6 + 1\times x + 1\times 6\\
+&= x^2+6x+x+6\\
+&= x^2+7x+6.
+\end{align*}
+\vspace{0.2em}
 \begin{enumerate}[label=(\alph*)]
   \item $3(x+2)+2(x-5)$
   \anshere
@@ -113,6 +131,13 @@
 \subsection*{Factorise fully}
 \noindent\textit{Find the highest common factor (HCF) of every term --- it can include
 more than one letter, and a power of a letter.}
+
+\vspace{0.3em}
+\noindent\textbf{Worked example:} Factorise $12x^4y+18x^2y^3$. The HCF of $12$ and $18$
+is $6$; the HCF of $x^4$ and $x^2$ is $x^2$; and $y$ is common to both terms. So the HCF
+is $6x^2y$, giving
+\[12x^4y+18x^2y^3 = 6x^2y(2x^2+3y^2).\]
+\vspace{0.2em}
 \begin{enumerate}[label=(\alph*)]
   \item $18x^5y^2+12x^7$
   \anshere
@@ -130,6 +155,11 @@ more than one letter, and a power of a letter.}
 
 \subsection*{Solve}
 \noindent\textit{Expand the brackets first, then solve for $x$.}
+
+\vspace{0.3em}
+\noindent\textbf{Worked example:} Solve $4(x-1)=16$. Expand the bracket:
+$4x-4=16$. Add $4$ to both sides: $4x=20$. Divide both sides by $4$: $x=5$.
+\vspace{0.2em}
 \begin{enumerate}[label=(\alph*)]
   \item $3(x+5)=27$
   \anshere
