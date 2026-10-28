@@ -15,13 +15,21 @@
 \titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
 \titlespacing{\subsection}{0pt}{0.8em}{0.3em}
 
-\pagestyle{fancy}
 \setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{Factorising and Expanding Brackets}
-\fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \fancyhead[L]{Factorising and Expanding Brackets}
+  \fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
 
 \newcommand{\ans}{\hrulefill}
 \newcommand{\anshere}{\par\vspace{0.2em}\noindent\ans\par\vspace{0.2em}}
@@ -30,6 +38,7 @@
 \setlength{\columnseprule}{0.4pt}
 
 \begin{document}
+\thispagestyle{firstpage}
 
 \begin{center}
   {\Large\bfseries Factorising and Expanding Brackets}
