@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.7cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{makecell}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.1em}{0.5em}
+
+\setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Analysing Two-Way Tables}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \fancyhead[L]{Analysing Two-Way Tables}
+  \fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newcommand{\ans}{\hrulefill}
+\newcommand{\anshere}{\par\vspace{0.3em}\noindent\ans\par\vspace{0.3em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.5em, topsep=0.2em}
+\setlist[enumerate,2]{leftmargin=1.3em, itemsep=0.3em, topsep=0.2em}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}p{1.9cm}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}p{3.3cm}}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\begin{center}
+  {\Large\bfseries Analysing Two-Way Tables}\\[2pt]
+  {\normalsize NCEA Level 2 Statistics --- Bivariate Categorical Data}
+\end{center}
+
+\vspace{0.4em}
+\noindent A \textbf{two-way table} sorts data by two categories at once. Whenever the
+\textbf{groups being compared are different sizes}, comparing raw counts can be
+misleading --- you need to convert counts to \textbf{percentages} first.
+
+\vspace{0.3em}
+\noindent\textbf{Row percentage} = $\dfrac{\text{cell value}}{\text{row total}} \times 100$.
+This tells you, \emph{within one group}, what share falls into each category --- which
+is exactly what you need to fairly compare groups of different sizes.
+
+\vspace{0.4em}
+\noindent\textbf{Worked example:} 40 students at School A and 200 students at School B
+were asked if they play a sport. 28 students at School A said yes, and 120 students at
+School B said yes. More School B students said yes (120 vs 28) --- but School B also
+asked far more students, so this comparison is misleading. Using row percentages instead:
+\[\text{School A: } \frac{28}{40}\times 100 = 70\%, \qquad
+  \text{School B: } \frac{120}{200}\times 100 = 60\%.\]
+A \emph{higher percentage} of School A students play a sport, even though fewer of them
+said yes in total.
+
+\section{Calculating Percentages}
+\noindent 170 Year 13 students were asked how they studied for an exam, and whether they
+passed.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|}
+\hline
+ & \textbf{Passed} & \textbf{Failed} & \textbf{Total} \\\hline
+\textbf{Group study}    & 56 & 14 & \\\hline
+\textbf{Solo study}     & 42 & 18 & \\\hline
+\textbf{Did not study}  & 10 & 30 & \\\hline
+\textbf{Total}          &    &    & \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item Copy and complete the table, filling in all the totals.
+  \item What percentage of students who studied in a group passed?
+  \anshere
+  \item What percentage of students who studied alone passed?
+  \anshere
+  \item What percentage of students who did not study passed?
+  \anshere
+  \item What percentage of \emph{all} 170 students passed?
+  \anshere
+\end{enumerate}
+
+\section{Comparing Distributions}
+\noindent Use your percentages from Section 1 to answer these.
+
+\begin{enumerate}
+  \item Write a sentence comparing the pass rate of students who studied in a group with
+    students who did not study, using percentages.
+  \anshere
+  \item Tyler says, ``Group study must be better than solo study, because more students
+    who did group study passed (56) than students who did solo study (18 failed vs 14
+    failed).'' Explain what is wrong with the way Tyler is comparing these two groups.
+  \anshere
+  \item Using percentages, write a correct comparison between group study and solo
+    study.
+  \anshere
+\end{enumerate}
+
+\section{Describing a Trend}
+\noindent 400 people, in four age groups, were asked which type of transport they use
+most often to get to work.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|Y|}
+\hline
+ & \textbf{Public transport} & \textbf{Car} & \textbf{Other} & \textbf{Total} \\\hline
+\textbf{15--24} & 45 & 30 & 25 & \\\hline
+\textbf{25--44} & 30 & 60 & 10 & \\\hline
+\textbf{45--64} & 20 & 70 & 10 & \\\hline
+\textbf{65+}    & 15 & 55 & 30 & \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item Copy and complete the table, filling in the total for each age group.
+  \item Calculate the percentage of each age group that uses public transport most
+    often.
+  \anshere
+  \item Describe the trend in public transport use as age increases. Refer to your
+    percentages.
+  \anshere
+  \item The percentage using ``Other'' transport is much higher for the 65+ age group
+    than for the 45--64 age group. Suggest a reason this might be the case.
+  \anshere
+\end{enumerate}
+
+\section{Making a Justified Conclusion}
+\noindent Two Year 12 classes were asked whether they like rugby.
+
+\begin{center}
+\begin{tabular}{|L|Y|Y|Y|}
+\hline
+ & \textbf{Like} & \textbf{Dislike} & \textbf{Total} \\\hline
+\textbf{Class A} & 14 & 8  & \\\hline
+\textbf{Class B} & 11 & 13 & \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+  \item Calculate the percentage of each class that likes rugby.
+  \anshere
+  \item Class A's percentage is noticeably higher than Class B's. Explain why this
+    difference might \emph{not} show a real difference between the two classes, given
+    how many students are in each sample.
+  \anshere
+  \item What could you do to become more confident that there is a genuine difference
+    between the two classes, rather than the difference being due to chance?
+  \anshere
+  \item In Section 3, you found that public transport use decreases as age increases.
+    This survey only sampled people from one city. Explain why you should be cautious
+    about concluding this trend is true for \emph{everyone}, everywhere.
+  \anshere
+\end{enumerate}
+
+\end{document}
