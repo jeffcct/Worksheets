@@ -32,8 +32,8 @@
 }
 
 \newcommand{\ans}{\hrulefill}
-\newcommand{\anshere}{\par\vspace{0.2em}\noindent\ans\par\vspace{0.2em}}
-\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.4em, topsep=0.2em}
+\newcommand{\anshere}{\par\vspace{0.9em}\noindent\ans\par\vspace{1.3em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=1.5em, topsep=0.4em}
 \setlength{\columnsep}{1.1cm}
 \setlength{\columnseprule}{0.4pt}
 \raggedcolumns
@@ -48,7 +48,6 @@
 
 \section*{Fluency}
 
-\begingroup\small
 \begin{multicols}{2}
 \subsection*{Simplify}
 \noindent\textbf{Worked example:} Simplify $12xy:18y$. Divide both sides by the HCF,
@@ -94,13 +93,14 @@ $8\div 2=4$, multiply the other side by $4$ too: $y=5\times 4=20$.
   \anshere
 \end{enumerate}
 \end{multicols}
-\endgroup
 
 \newpage
 
 \section*{Problem Solving}
 
-\begingroup\small
+\renewcommand{\anshere}{\par\vspace{2.2em}\noindent\ans\par\vspace{3.0em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=3.6em, topsep=0.6em}
+
 \begin{multicols}{2}
 \subsection*{Solve}
 \noindent\textbf{Worked example:} Solve $(x+2):(x-1)=5:3$. Cross-multiply, then
@@ -149,12 +149,14 @@ $a=5k$ and $b=3k$, so $5k-3k=14 \Rightarrow k=7$. Then $a=35$ and $b=21$.
   \anshere
 \end{enumerate}
 \end{multicols}
-\endgroup
 
 \newpage
 
 \section*{Reasoning}
 \noindent\textit{No algebra here --- just ratio reasoning. Show your working.}
+
+\renewcommand{\anshere}{\par\vspace{2.4em}\noindent\ans\par\vspace{3.2em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=3.0em, topsep=0.6em}
 
 \begin{enumerate}[label=(\alph*)]
   \item Explain why the ratios $8:12$ and $2:3$ represent the same relationship.
@@ -176,7 +178,12 @@ $a=5k$ and $b=3k$, so $5k-3k=14 \Rightarrow k=7$. Then $a=35$ and $b=21$.
   \anshere
 \end{enumerate}
 
+\newpage
+
 \section*{Enrichment}
+
+\renewcommand{\anshere}{\par\vspace{3.6em}\noindent\ans\par\vspace{4.8em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=5.0em, topsep=0.6em}
 
 \subsection*{Combining Ratios}
 \noindent\textit{To combine $a:b$ and $b:c$ into one ratio $a:b:c$, scale each
