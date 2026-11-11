@@ -44,7 +44,7 @@
 % axis box suited to all-positive scatter data: xmin xmax ymin ymax xtick ytick xlabel ylabel
 \newcommand{\scatteraxis}[8]{%
   \begin{axis}[
-    width=8.2cm, height=6.2cm,
+    width=8.0cm, height=5.6cm,
     xmin=#1, xmax=#2, ymin=#3, ymax=#4,
     xtick distance=#5, ytick distance=#6,
     grid=both, grid style={line width=.1pt, draw=gray!35},
@@ -116,10 +116,10 @@ score for a student who studied for $2.5$ hours per week.
 \noindent For each scatter graph: (a) draw a line of best fit by eye, (b) use your line to make
 the estimate asked for, and (c) answer the follow-up questions.
 
-\renewcommand{\anshere}{\par\vspace{0.3em}\noindent\ans\par\vspace{0.3em}}
-\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.4em, topsep=0.3em}
+\renewcommand{\anshere}{\par\vspace{0.2em}\noindent\ans\par\vspace{0.2em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.3em, topsep=0.2em}
 
-\vspace{0.4em}
+\vspace{0.3em}
 \noindent\textbf{1. Hours of sleep vs reaction time}
 
 \begin{center}
@@ -144,7 +144,7 @@ the estimate asked for, and (c) answer the follow-up questions.
   \anshere
 \end{enumerate}
 
-\vspace{0.6em}
+\vspace{0.4em}
 \noindent\textbf{2. Weekly training distance vs race time}
 
 \begin{center}
@@ -152,6 +152,7 @@ the estimate asked for, and (c) answer the follow-up questions.
 \scatteraxis{0}{45}{15}{70}{5}{10}{Weekly training distance (km)}{Race time (minutes)}
 \addplot[only marks, mark=*, mark size=1.6pt, blue] coordinates {
   (5,62) (8,58) (10,55) (10,57) (12,52) (15,48) (15,50) (18,45)
+  (20,42) (22,39) (24,33) (24,37) (26,32) (28,30) (30,27)
   (32,30) (35,28) (36,27) (38,25) (40,22)
 };
 \end{axis}
@@ -161,6 +162,9 @@ the estimate asked for, and (c) answer the follow-up questions.
 \begin{enumerate}[label=(\alph*)]
   \item Use your line of best fit to estimate the race time for a runner who trains
     $25$\,km per week.
+  \anshere
+  \item There are data points close to $25$\,km. Explain why you should still read your estimate
+    from the line, rather than just from one of those nearby points.
   \anshere
   \item Use your line to estimate the race time for a runner who trains $0$\,km per week.
     Explain why this particular estimate might \emph{not} be reliable, even though you used a
