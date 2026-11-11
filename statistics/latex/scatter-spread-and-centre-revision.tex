@@ -296,4 +296,53 @@ result here.
   \anshere
 \end{enumerate}
 
+\newpage
+
+\section{Extension: Putting It All Together}
+
+\noindent The dot plots below show the number of points scored by two basketball players over
+their last $12$ games.
+
+\vspace{0.4em}
+\noindent\textbf{Player A}
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (6.5,0) -- (16.5,0) node[right] {\small Points scored};
+\foreach \x/\lbl in {7/14,8/16,9/18,10/20,11/22,12/24,13/26,14/28,15/30,16/32}
+  \draw (\x,0.08) -- (\x,-0.08) node[below, font=\tiny] {\lbl};
+\foreach \x/\n in {7/1,8/1,9/1,10/2,11/1,12/2,13/1,14/1,15/1,16/1}
+  \foreach \i in {1,...,\n} \fill[blue] (\x,{0.3+0.35*(\i-1)}) circle (3pt);
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2em}
+\noindent\textbf{Player B}
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (6.5,0) -- (16.5,0) node[right] {\small Points scored};
+\foreach \x/\lbl in {7/14,8/16,9/18,10/20,11/22,12/24,13/26,14/28,15/30,16/32}
+  \draw (\x,0.08) -- (\x,-0.08) node[below, font=\tiny] {\lbl};
+\foreach \x/\n in {9/1,9.5/1,10/2,10.5/3,11/2,11.5/2,12/1}
+  \foreach \i in {1,...,\n} \fill[red] (\x,{0.3+0.35*(\i-1)}) circle (3pt);
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Describe the \textbf{centre} of each player's dot plot (where their scores are centred ---
+    a typical score for each player).
+  \anshere
+  \item Describe the \textbf{spread} of each player's dot plot (how spread out or bunched together
+    their scores are).
+  \anshere
+  \item Which player performs \textbf{best}, on average? Which piece of information --- centre or
+    spread --- tells you this?
+  \anshere
+  \item Which player performs \textbf{more consistently}? Which piece of information --- centre or
+    spread --- tells you this?
+  \anshere
+  \item A commentator says, ``Player A is simply the better player.'' Using your answers above,
+    explain why this statement is incomplete.
+  \anshere
+\end{enumerate}
+
 \end{document}
