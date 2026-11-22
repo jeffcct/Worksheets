@@ -1,0 +1,233 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{array}
+
+\titleformat{\section}{\large\bfseries\color{blue!50!black}}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing{\subsection}{0pt}{0.8em}{0.3em}
+
+\setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Year 9 Revision: FDP and Statistics}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \fancyhead[L]{Year 9 Revision: FDP and Statistics}
+  \fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newcommand{\ans}{\hrulefill}
+\newcommand{\anshere}{\par\vspace{0.4em}\noindent\ans\par\vspace{0.4em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.5em, topsep=0.3em}
+\setlength{\columnsep}{1.1cm}
+\setlength{\columnseprule}{0.4pt}
+\raggedcolumns
+
+\newcolumntype{Y}{>{\centering\arraybackslash}p{2.3cm}}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\begin{center}
+  {\Large\bfseries Year 9 Revision: FDP and Statistics}
+\end{center}
+\vspace{0.3em}
+
+\section{Fractions, Decimals and Percentages}
+
+\noindent\textbf{Converting between forms:}
+\begin{itemize}[leftmargin=1.4em, itemsep=0.2em, topsep=0.2em]
+  \item Fraction $\to$ decimal: divide the numerator by the denominator.
+  \item Decimal $\to$ percentage: multiply by $100$ (move the decimal point $2$ places right).
+  \item Percentage $\to$ fraction: write over $100$, then simplify.
+\end{itemize}
+
+\vspace{0.3em}
+\noindent\textbf{Worked example:} Convert $\dfrac{3}{4}$ to a decimal and a percentage.
+\[
+  \frac{3}{4} = 3 \div 4 = 0.75, \qquad 0.75 \times 100 = 75\%.
+\]
+
+\vspace{0.4em}
+\noindent Complete the table below, giving fractions in simplest form.
+
+\begin{center}
+\begin{tabular}{|Y|Y|Y|}
+\hline
+\textbf{Fraction} & \textbf{Decimal} & \textbf{Percentage} \\\hline
+$\dfrac{3}{4}$ & $0.75$ & $75\%$ \\[0.6em]\hline
+$\dfrac{2}{5}$ & & \\[0.9em]\hline
+ & $0.7$ & \\[0.9em]\hline
+$\dfrac{1}{8}$ & & \\[0.9em]\hline
+ & $0.45$ & \\[0.9em]\hline
+ & & $37.5\%$ \\[0.9em]\hline
+$\dfrac{11}{25}$ & & \\[0.9em]\hline
+ & & $34\%$ \\[0.9em]\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\subsection*{Using FDP in probability}
+\noindent Probability can be written as a fraction, decimal, \emph{or} percentage --- they all
+mean the same thing.
+\[
+  P(\text{event}) = \frac{\text{favourable outcomes}}{\text{total outcomes}}.
+\]
+
+\vspace{0.3em}
+\noindent\textbf{Worked example:} A bag has $5$ red, $3$ blue and $2$ green marbles ($10$ in
+total). Find $P(\text{red})$ as a fraction, decimal and percentage.
+\[
+  P(\text{red}) = \frac{5}{10} = \frac{1}{2} = 0.5 = 50\%.
+\]
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\alph*)]
+  \item Using the same bag of marbles, find $P(\text{blue})$ as a fraction, decimal and
+    percentage.
+  \anshere
+  \item Find $P(\text{green})$ as a fraction, decimal and percentage.
+  \anshere
+  \item Find $P(\text{not red})$ as a fraction, decimal and percentage. (Hint: use your answer
+    to the worked example.)
+  \anshere
+  \item A spinner has $8$ equal sections: $3$ blue, $4$ yellow, $1$ red. Find $P(\text{blue})$
+    as a fraction, decimal and percentage.
+  \anshere
+  \item Find $P(\text{yellow})$ for the same spinner.
+  \anshere
+  \item A standard die is rolled. Find $P(\text{even number})$ as a fraction, decimal and
+    percentage.
+  \anshere
+  \item Find $P(\text{a number more than } 4)$ for the same die. Round your decimal and
+    percentage to $1$ decimal place.
+  \anshere
+  \item A card is drawn from a standard deck of $52$ cards. Find $P(\text{a heart})$ as a
+    fraction, decimal and percentage. (There are $13$ hearts in a deck.)
+  \anshere
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.3em}
+\begin{enumerate}[label=(\alph*), resume]
+  \item A vending machine has a $15\%$ chance of jamming each time it is used. Find the
+    probability that it does \emph{not} jam, as a percentage, a decimal, and a fraction in
+    simplest form.
+  \anshere
+  \item A weather forecast says there is a ``$30\%$ chance of rain'' tomorrow. Write this
+    probability as a fraction and a decimal. Then explain in a sentence what a $30\%$ chance of
+    rain actually means --- does it guarantee it will \emph{not} rain?
+  \anshere
+\end{enumerate}
+
+\newpage
+
+\section{Statistics Revision}
+
+\subsection*{Sound statistical questions}
+\noindent A \textbf{statistical question} is one that can be answered by \emph{collecting data},
+where you expect the data to \textbf{vary}. It usually asks about a \emph{group}, not a single
+fixed fact.
+\[
+  \text{\emph{Not statistical:}} \;\; \text{``How old am I?''} \qquad
+  \text{\emph{Statistical:}} \;\; \text{``What are the ages of people in my family?''}
+\]
+The first question has one fixed answer. The second expects a range of different answers, which
+you would need to collect data to find.
+
+\vspace{0.4em}
+\noindent\textbf{For each question below, write S (statistical) or N (not statistical), and
+give a one-sentence reason.}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\alph*)]
+  \item How many siblings does Jamie have?
+  \anshere
+  \item How many siblings do students in our class have?
+  \anshere
+  \item What is the temperature outside right now?
+  \anshere
+  \item What were the daily high temperatures in Wellington this month?
+  \anshere
+  \item What is the most popular pizza topping among Year 9 students at our school?
+  \anshere
+  \item What is my favourite pizza topping?
+  \anshere
+  \item How long is the Auckland Harbour Bridge?
+  \anshere
+  \item How long does it take different students to run $100$\,m?
+  \anshere
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.3em}
+\noindent\textbf{Rewrite each question below so that it becomes a sound statistical question.}
+\begin{enumerate}[label=(\alph*)]
+  \item ``How tall am I?''
+  \anshere
+  \item ``What is my favourite sport?''
+  \anshere
+  \item ``How many hours of sleep did I get last night?''
+  \anshere
+\end{enumerate}
+
+\newpage
+
+\subsection*{Explanatory vs response variables}
+\noindent When we investigate whether two variables are related, the \textbf{explanatory
+variable} is the one we think might explain or influence a change. The \textbf{response
+variable} is the one being measured --- it may \emph{respond} to changes in the explanatory
+variable. (This does not always mean one \emph{causes} the other --- only that we are
+investigating a possible relationship.)
+
+\vspace{0.3em}
+\noindent\textbf{Worked example:} A scientist wants to find out if the amount of sunlight a
+plant gets affects how tall it grows.
+\begin{itemize}[leftmargin=1.4em, itemsep=0.2em, topsep=0.2em]
+  \item Explanatory variable: amount of sunlight.
+  \item Response variable: height of the plant.
+\end{itemize}
+
+\vspace{0.4em}
+\noindent\textbf{For each scenario, state the explanatory variable and the response variable.}
+\begin{enumerate}[label=(\alph*)]
+  \item Does the number of hours spent studying affect exam scores?
+  \anshere
+  \item Is there a relationship between a person's age and their reaction time?
+  \anshere
+  \item Does the amount of water in a kettle affect how long it takes to boil?
+  \anshere
+  \item Researchers want to know if the amount of fertiliser given to tomato plants affects the
+    number of tomatoes produced.
+  \anshere
+  \item Does the price of a movie ticket affect how many people attend the cinema?
+  \anshere
+  \item Is a student's typing speed related to how many hours per week they spend using a
+    computer?
+  \anshere
+\end{enumerate}
+
+\vspace{0.4em}
+\noindent\textbf{Putting it together:} Write your own statistical question that investigates a
+relationship between two variables. Identify the explanatory variable and the response variable
+in your question.
+\anshere
+\anshere
+
+\end{document}
