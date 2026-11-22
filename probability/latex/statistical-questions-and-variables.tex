@@ -1,0 +1,183 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{array}
+
+\titleformat{\section}{\large\bfseries\color{blue!50!black}}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.1em}{0.4em}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing{\subsection}{0pt}{0.8em}{0.3em}
+
+\setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Statistical Questions and Variables}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \fancyhead[L]{Statistical Questions and Variables}
+  \fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newcommand{\ans}{\hrulefill}
+\newcommand{\anshere}{\par\vspace{0.4em}\noindent\ans\par\vspace{0.4em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.5em, topsep=0.3em}
+\setlength{\columnsep}{1.1cm}
+\setlength{\columnseprule}{0.4pt}
+\raggedcolumns
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\begin{center}
+  {\Large\bfseries Statistical Questions and Variables}
+\end{center}
+\vspace{0.3em}
+
+\section{What is a Statistical Question?}
+
+\noindent A \textbf{statistical question} is one that is answered using statistics --- by
+\emph{collecting data} from a group (for example, asking lots of people, or measuring lots of
+things). You expect the data you collect to \textbf{vary}, rather than there being one single
+fixed answer.
+
+\vspace{0.3em}
+\noindent\textbf{Worked example:} Is ``How many pets does Lily have?'' a statistical question?
+\emph{No} --- it asks about one specific person, so there is only one fixed answer. But ``How
+many pets do students in Year 9 have?'' \emph{is} a statistical question, because if you asked
+every student, you would expect the answers to vary from student to student, and you would need
+to actually collect that data to find out.
+
+\vspace{0.5em}
+\noindent\textbf{For each question below, write S (statistical) or N (not statistical), and give
+a one-sentence reason.}
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\alph*)]
+  \item How many hours of screen time does Alex have per day?
+  \anshere
+  \item How many hours of screen time do students in our class have per day?
+  \anshere
+  \item What is the tallest building in the world?
+  \anshere
+  \item What are the heights of the buildings in Auckland's CBD?
+  \anshere
+  \item What is my dog's favourite treat?
+  \anshere
+  \item What are the favourite treats of dogs at the local vet clinic?
+  \anshere
+  \item How many points did the All Blacks score in their last match?
+  \anshere
+  \item How many points do rugby teams score, on average, in matches this season?
+  \anshere
+\end{enumerate}
+\end{multicols}
+
+\vspace{0.3em}
+\noindent\textbf{Rewrite each question below so that it becomes a sound statistical question.}
+\begin{enumerate}[label=(\alph*)]
+  \item ``What's my favourite music genre?''
+  \anshere
+  \item ``How many hours did I sleep last night?''
+  \anshere
+  \item ``How fast can I run $100$\,m?''
+  \anshere
+\end{enumerate}
+
+\newpage
+
+\section{Explanatory vs Response Variables}
+
+\noindent When a statistical question investigates a \textbf{relationship between two
+variables}, we give those variables different names:
+\begin{itemize}[leftmargin=1.4em, itemsep=0.2em, topsep=0.2em]
+  \item The \textbf{explanatory variable} is the one we think might explain or influence a
+    change --- it's the variable we control or choose.
+  \item The \textbf{response variable} is the one being measured --- it may \emph{respond} to
+    changes in the explanatory variable.
+\end{itemize}
+\noindent (This does not always mean one \emph{causes} the other --- only that we are
+investigating whether they are related.)
+
+\vspace{0.3em}
+\noindent\textbf{Worked example:} Does the temperature outside affect how many ice creams a shop
+sells?
+\begin{itemize}[leftmargin=1.4em, itemsep=0.2em, topsep=0.2em]
+  \item Explanatory variable: temperature.
+  \item Response variable: number of ice creams sold.
+\end{itemize}
+
+\vspace{0.4em}
+\noindent\textbf{For each scenario, state the explanatory variable and the response variable.}
+\begin{enumerate}[label=(\alph*)]
+  \item Does the amount of time spent practising free throws affect a basketball player's
+    success rate?
+  \anshere
+  \item Is there a relationship between the number of hours of sleep someone gets and their
+    test score the next day?
+  \anshere
+  \item Does the amount of rainfall in a month affect the height of plants in a garden?
+  \anshere
+  \item Researchers want to know if a person's daily step count affects their resting heart
+    rate.
+  \anshere
+  \item Does the size of a classroom affect how many students can comfortably fit inside it?
+  \anshere
+  \item Is a person's typing accuracy related to how many years they have been using a
+    keyboard?
+  \anshere
+\end{enumerate}
+
+\newpage
+
+\subsection*{Spot the mistake}
+\noindent\textbf{For each statement, explain what is wrong with it.}
+\begin{enumerate}[label=(\alph*)]
+  \item A student investigating rainfall and plant height says: ``The explanatory variable is
+    plant height and the response variable is rainfall.''
+  \anshere
+  \item A student investigating sleep and test scores says: ``The response variable is hours of
+    sleep, because that's the one I measured first.''
+  \anshere
+\end{enumerate}
+
+\vspace{0.5em}
+\subsection*{Putting it all together}
+\noindent\textbf{For each scenario: (i) decide whether it is a sound statistical question, and
+(ii) if it investigates a relationship between two variables, state the explanatory and response
+variables.}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Do students who do more exercise each week tend to get better grades?
+  \anshere
+  \item What is the most common pet owned by households in New Zealand?
+  \anshere
+  \item Does wearing a seatbelt reduce the risk of injury in a car accident?
+  \anshere
+\end{enumerate}
+
+\vspace{0.4em}
+\noindent\textit{Hint for (b): some statistical questions only investigate \emph{one} variable
+(like ``favourite pet''), rather than a relationship between two things --- these don't have an
+explanatory or response variable at all.}
+
+\vspace{0.6em}
+\subsection*{Your turn}
+\noindent Write your own statistical question that investigates a relationship between two
+variables. Identify the explanatory variable and the response variable in your question.
+\anshere
+\anshere
+
+\end{document}
