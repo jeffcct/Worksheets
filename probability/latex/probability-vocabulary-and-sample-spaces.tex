@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{array}
+
+\titleformat{\section}{\large\bfseries\color{blue!50!black}}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.1em}{0.4em}
+
+\setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Probability Vocabulary}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \fancyhead[L]{Probability Vocabulary}
+  \fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newcommand{\ans}{\hrulefill}
+\newcommand{\anshere}{\par\vspace{0.4em}\noindent\ans\par\vspace{0.4em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.7em, topsep=0.3em}
+
+\newcolumntype{M}{>{\centering\arraybackslash}p{1.6cm}}
+\newcolumntype{T}{>{\raggedright\arraybackslash}p{3.6cm}}
+\newcolumntype{D}{>{\raggedright\arraybackslash}p{9.5cm}}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\begin{center}
+  {\Large\bfseries Probability Vocabulary}
+\end{center}
+\vspace{0.3em}
+
+\section*{Match the Term to its Definition}
+\noindent Write the letter of the matching definition next to each term.
+
+\begin{center}
+\begin{tabular}{|T|M|}
+\hline
+\textbf{Term} & \textbf{Letter} \\\hline
+Probability & \\[0.9em]\hline
+Outcome & \\[0.9em]\hline
+Sample space & \\[0.9em]\hline
+Event & \\[0.9em]\hline
+Event space & \\[0.9em]\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4em}
+\begin{center}
+\begin{tabular}{|M|D|}
+\hline
+\textbf{} & \textbf{Definition} \\\hline
+A & The set of outcomes that satisfy a particular event. \\[0.6em]\hline
+B & A single possible result of an experiment. \\[0.6em]\hline
+C & A measure, from $0$ to $1$, of how likely an event is to happen. \\[0.6em]\hline
+D & The set of \emph{all} possible outcomes of an experiment. \\[0.6em]\hline
+E & A description of an outcome (or outcomes) that we are interested in. \\[0.6em]\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.6em}
+\section*{Worked Example}
+\noindent \textbf{Experiment:} Roll a fair six-sided die. \quad \textbf{Event:} rolling a number
+greater than $4$.
+
+\vspace{0.3em}
+\begin{center}
+\begin{tabular}{|T|D|}
+\hline
+Sample space & $\{1,2,3,4,5,6\}$ --- all possible outcomes. \\\hline
+Outcome & $5$ --- just \emph{one} possible result (there are $6$ outcomes in total). \\\hline
+Event & ``rolling a number greater than $4$'' --- the description of what we want. \\\hline
+Event space & $\{5,6\}$ --- the outcomes that satisfy the event. \\\hline
+Probability & $P(\text{event}) = \dfrac{2}{6} = \dfrac{1}{3}$ --- event space size $\div$ sample
+space size. \\\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\section*{Sample Spaces and Event Spaces}
+\noindent For each experiment: list the \textbf{sample space}, then list the \textbf{event
+space} for the given event.
+
+\begin{enumerate}[label=(\alph*)]
+  \item Roll a die. Event: rolling an even number.
+  \anshere
+  \item Toss a coin. Event: landing on tails.
+  \anshere
+  \item Spin a spinner numbered $1$--$5$. Event: spinning a number less than $3$.
+  \anshere
+  \item Pick a weekday (Monday--Friday). Event: picking a day starting with ``T''.
+  \anshere
+  \item Draw a suit from a deck of cards. Event: drawing a red suit.
+  \anshere
+  \item Pick a letter from the word \textsc{maths}. Event: picking a vowel.
+  \anshere
+  \item Roll a die. Event: rolling a multiple of $3$.
+  \anshere
+  \item Pick a month from January--June. Event: picking a month with exactly $30$ days.
+  \anshere
+\end{enumerate}
+
+\newpage
+
+\section*{Did the Event Happen?}
+\noindent For each experiment: list the \textbf{sample space}, list the \textbf{event space} for
+the given event, then say whether the event happened for the stated outcome.
+
+\begin{enumerate}[label=(\alph*)]
+  \item Roll a die. Event: rolling an odd number. The outcome was $4$. Did the event happen?
+  \anshere
+  \item Toss a coin. Event: landing on heads. The outcome was tails. Did the event happen?
+  \anshere
+  \item Spin a spinner numbered $1$--$6$. Event: spinning a number more than $4$. The outcome was
+    $5$. Did the event happen?
+  \anshere
+  \item Pick a letter from the word \textsc{number}. Event: picking a vowel. The outcome was
+    ``B''. Did the event happen?
+  \anshere
+  \item Roll a die. Event: rolling a factor of $6$. The outcome was $4$. Did the event happen?
+  \anshere
+  \item Draw a suit from a deck of cards. Event: drawing a black suit. The outcome was clubs.
+    Did the event happen?
+  \anshere
+  \item Pick a day of the week (Sunday--Saturday). Event: picking a weekend day. The outcome was
+    Wednesday. Did the event happen?
+  \anshere
+  \item Spin a spinner numbered $1$--$10$. Event: spinning a multiple of $4$. The outcome was
+    $8$. Did the event happen?
+  \anshere
+\end{enumerate}
+
+\end{document}
