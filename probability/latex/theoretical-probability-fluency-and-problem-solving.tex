@@ -31,6 +31,12 @@
 
 \newcommand{\ans}{\hrulefill}
 \newcommand{\anshere}{\par\vspace{0.4em}\noindent\ans\par\vspace{0.4em}}
+\newcommand{\answork}{%
+  \par\vspace{0.2em}
+  \noindent $\Omega = $\hrulefill\par\vspace{0.2em}
+  \noindent $E = $\hrulefill\par\vspace{0.2em}
+  \noindent $P(E) = $\hrulefill\par\vspace{0.2em}
+}
 \setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.6em, topsep=0.3em}
 \setlength{\columnsep}{1.1cm}
 \setlength{\columnseprule}{0.4pt}
@@ -46,49 +52,54 @@
 
 \section*{Fluency}
 
-\noindent\textbf{Theoretical probability:}
+\noindent\textbf{Theoretical probability:} ($\Omega$ = sample space, $E$ = event space)
 \[
-  P(E) = \frac{\text{number of items in the event space}}{\text{number of items in the sample
-  space}}.
+  P(E) = \frac{\text{number of items in } E}{\text{number of items in } \Omega}.
 \]
 
 \vspace{0.3em}
 \noindent\textbf{Worked example:} A bag has $7$ red and $3$ blue counters. Find $P(\text{red})$.
-\[
-  P(\text{red}) = \frac{7}{10}.
-\]
+\begin{quote}
+\noindent $\Omega = \{7 \text{ red}, 3 \text{ blue}\}$ --- $10$ counters in total. \\
+$E = \{7 \text{ red}\}$ --- $7$ counters are red. \\
+$P(\text{red}) = \dfrac{7}{10}$.
+\end{quote}
 
-\vspace{0.5em}
-\noindent\textbf{Give each answer as a fraction in simplest form.}
+\vspace{0.3em}
+\noindent\textbf{For each question: write down the sample space and the event space, then give
+the probability as a fraction in simplest form.}
 
+\begingroup\small
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.3em, topsep=0.2em}
 \begin{multicols}{2}
 \begin{enumerate}[label=(\alph*)]
   \item Roll a die. Find $P(6)$.
-  \anshere
+  \answork
   \item Toss a coin. Find $P(\text{tails})$.
-  \anshere
+  \answork
   \item A bag has $10$ balls, $4$ of which are red. Find $P(\text{red})$.
-  \anshere
+  \answork
   \item A spinner has $5$ equal sections numbered $1$--$5$. Find $P(3)$.
-  \anshere
+  \answork
   \item A card is drawn from a deck of $52$. Find $P(\text{an Ace})$. (There are $4$ Aces.)
-  \anshere
+  \answork
   \item Roll a die. Find $P(\text{even number})$.
-  \anshere
+  \answork
   \item A bag has $3$ red, $2$ blue and $5$ green marbles. Find $P(\text{blue})$.
-  \anshere
+  \answork
   \item Toss a coin. Find $P(\text{heads})$.
-  \anshere
+  \answork
   \item A spinner has $4$ equal sections: red, blue, green, yellow. Find $P(\text{yellow})$.
-  \anshere
+  \answork
   \item Roll a die. Find $P(\text{a number greater than } 4)$.
-  \anshere
+  \answork
   \item A box has $8$ pens: $5$ black and $3$ blue. Find $P(\text{black})$.
-  \anshere
+  \answork
   \item A class has $20$ students, $12$ of whom are girls. Find $P(\text{picking a girl})$.
-  \anshere
+  \answork
 \end{enumerate}
 \end{multicols}
+\endgroup
 
 \newpage
 
