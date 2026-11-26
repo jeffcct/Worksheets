@@ -1,0 +1,162 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{tikz}
+
+\titleformat{\section}{\large\bfseries\color{blue!50!black}}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.0em}{0.3em}
+
+\setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Fractions, Probability and Trees}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \fancyhead[L]{Fractions, Probability and Trees}
+  \fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newcommand{\ans}{\hrulefill}
+\newcommand{\anshere}{\par\vspace{0.3em}\noindent\ans\par\vspace{0.3em}}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.3em, topsep=0.2em}
+\setlength{\columnsep}{1.1cm}
+\setlength{\columnseprule}{0.4pt}
+\raggedcolumns
+
+\newcolumntype{Y}{>{\centering\arraybackslash}p{1.9cm}}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\begin{center}
+  {\Large\bfseries Fractions, Probability and Trees}
+\end{center}
+\vspace{0.2em}
+
+\begingroup\small
+
+\section*{Fractions, Decimals and Percentages}
+\noindent Fraction $\to$ decimal: divide. \quad Decimal $\to$ percentage: $\times 100$. \quad
+Percentage $\to$ fraction: write over $100$, simplify.
+
+\vspace{0.2em}
+\begin{center}
+\begin{tabular}{|Y|Y|Y|}
+\hline
+\textbf{Fraction} & \textbf{Decimal} & \textbf{Percentage} \\\hline
+$\dfrac{1}{4}$ & & \\[0.6em]\hline
+$\dfrac{3}{5}$ & & \\[0.6em]\hline
+ & $0.15$ & \\[0.6em]\hline
+ & & $35\%$ \\[0.6em]\hline
+$\dfrac{17}{20}$ & & \\[0.6em]\hline
+ & $0.08$ & \\[0.6em]\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4em}
+\section*{Probability as a Decimal}
+\noindent Find each probability, giving your answer as a \textbf{decimal}.
+
+\begin{multicols}{2}
+\begin{enumerate}[label=(\alph*)]
+  \item A spinner has $5$ equal sections, $1$ of which is red. Find $P(\text{red})$.
+  \anshere
+  \item A bag has $20$ balls, $5$ of which are yellow. Find $P(\text{yellow})$.
+  \anshere
+  \item A class of $20$ students has $8$ who walk to school. Find $P(\text{walks})$.
+  \anshere
+  \item Toss a coin. Find $P(\text{heads})$.
+  \anshere
+  \item A spinner has $4$ equal sections, $3$ of which are green. Find $P(\text{green})$.
+  \anshere
+  \item A box of $50$ raffle tickets has $45$ losing tickets. Find $P(\text{losing ticket})$.
+  \anshere
+\end{enumerate}
+\end{multicols}
+\endgroup
+
+\newpage
+
+\section*{Multistep Events: Probability Trees}
+\noindent A \textbf{probability tree} shows the outcomes of two (or more) events, one after the
+other. \textbf{Multiply along the branches} to find the probability of a combined outcome.
+
+\vspace{0.3em}
+\noindent\textbf{Worked example:} A coin is tossed twice. Find $P(\text{two heads})$.
+
+\begin{center}
+\begin{tikzpicture}[
+  level distance=2.2cm,
+  level 1/.style={sibling distance=3.4cm},
+  level 2/.style={sibling distance=1.9cm},
+  edge from parent/.style={draw, -latex},
+  every node/.style={font=\small}
+]
+\node {}
+  child { node {H}
+    child { node {HH} edge from parent node[above] {$\frac12$} }
+    child { node {HT} edge from parent node[below] {$\frac12$} }
+    edge from parent node[above] {$\frac12$}
+  }
+  child { node {T}
+    child { node {TH} edge from parent node[above] {$\frac12$} }
+    child { node {TT} edge from parent node[below] {$\frac12$} }
+    edge from parent node[below] {$\frac12$}
+  };
+\end{tikzpicture}
+\end{center}
+\noindent Multiply along each path: $P(HH)=\frac12\times\frac12=\frac14$, \;
+$P(HT)=\frac14$, \; $P(TH)=\frac14$, \; $P(TT)=\frac14$.
+
+\vspace{0.3em}
+\noindent $P(\text{two heads}) = P(HH) = \dfrac12 \times \dfrac12 = \dfrac14$.
+
+\vspace{0.5em}
+\noindent\textbf{Practice:} A bag has $3$ red and $2$ blue counters. A counter is picked, put
+back, then a second counter is picked. Complete the tree diagram below: label each branch with
+its probability, write the outcome at the end of each path, and multiply along the branches.
+
+\begin{center}
+\begin{tikzpicture}[
+  level distance=2.6cm,
+  level 1/.style={sibling distance=3.2cm},
+  level 2/.style={sibling distance=1.7cm},
+  edge from parent/.style={draw, -latex},
+  every node/.style={font=\small}
+]
+\node {}
+  child { node {R}
+    child { node {\hrulefill} edge from parent node[above] {} }
+    child { node {\hrulefill} edge from parent node[below] {} }
+    edge from parent node[above] {}
+  }
+  child { node {B}
+    child { node {\hrulefill} edge from parent node[above] {} }
+    child { node {\hrulefill} edge from parent node[below] {} }
+    edge from parent node[below] {}
+  };
+\end{tikzpicture}
+\end{center}
+
+\begin{enumerate}[label=(\alph*)]
+  \item Find $P(\text{two reds})$.
+  \anshere
+  \item Find $P(\text{no reds})$.
+  \anshere
+\end{enumerate}
+
+\end{document}
