@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{array}
+
+\titleformat{\section}{\large\bfseries\color{blue!50!black}}{\thesection}{0.6em}{}
+\titlespacing{\section}{0pt}{1.1em}{0.4em}
+
+\setlength{\headheight}{14pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Dice Experiment: Rolling a 7}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{firstpage}{%
+  \fancyhf{}
+  \fancyhead[L]{Dice Experiment: Rolling a 7}
+  \fancyhead[R]{Name: \makebox[4cm]{\hrulefill}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+}
+
+\newcommand{\ans}{\hrulefill}
+\newcommand{\anshere}{\par\vspace{0.4em}\noindent\ans\par\vspace{0.4em}}
+\newcommand{\answork}{%
+  \par\vspace{0.3em}
+  \noindent $\Omega = $\hrulefill\par\vspace{0.4em}
+  \noindent $E = $\hrulefill\par\vspace{0.4em}
+  \noindent $P(E) = $\hrulefill\par\vspace{0.3em}
+}
+\setlist[enumerate,1]{leftmargin=1.4em, itemsep=0.5em, topsep=0.3em}
+
+\newcolumntype{Z}{>{\centering\arraybackslash}p{1.1cm}}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\begin{center}
+  {\Large\bfseries Dice Experiment: Rolling a Total of 7}
+\end{center}
+\vspace{0.3em}
+\noindent In this experiment, you will find out how likely it is to roll a total of $7$ when
+you roll two dice --- first by \emph{calculating} it, then by \emph{testing} it yourself.
+
+\section{Step 1: Calculate the Expected Probability}
+\noindent When two dice are rolled and their scores are added together, there are $36$ equally
+likely outcomes. Complete the table below to find every possible total.
+
+\vspace{0.3em}
+\begin{center}
+\begin{tabular}{|Z|Z|Z|Z|Z|Z|Z|}
+\hline
+$+$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ \\\hline
+$1$ & \rule{0pt}{0.8cm} & & & & & \\\hline
+$2$ & \rule{0pt}{0.8cm} & & & & & \\\hline
+$3$ & \rule{0pt}{0.8cm} & & & & & \\\hline
+$4$ & \rule{0pt}{0.8cm} & & & & & \\\hline
+$5$ & \rule{0pt}{0.8cm} & & & & & \\\hline
+$6$ & \rule{0pt}{0.8cm} & & & & & \\\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4em}
+\noindent Now use your table to calculate the \textbf{expected (theoretical) probability} of
+rolling a total of $7$.
+\answork
+
+\section{Step 2: Carry Out the Experiment}
+\noindent Use the tally chart below to record your results as you go: one tally for
+\textbf{every} roll, and a second tally only when the total is $7$.
+
+\vspace{0.3em}
+\begin{center}
+\begin{tabular}{|p{4.3cm}|p{8.8cm}|p{1.6cm}|}
+\hline
+\textbf{} & \textbf{Tally} & \textbf{Total} \\\hline
+Number of $7$'s rolled & \rule{0pt}{1.6cm} & \\\hline
+Number of rolls & \rule{0pt}{1.6cm} & \\\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4em}
+\noindent\textbf{Instructions:}
+\begin{enumerate}[label=\arabic*.]
+  \item Roll two dice together and add the two scores to find the total.
+  \item Add one tally mark to \textbf{``Number of rolls''}.
+  \item If the total was $7$, also add one tally mark to \textbf{``Number of $7$'s rolled''}.
+  \item Repeat steps 1--3 until you have rolled \textbf{at least $30$ times}.
+  \item Count up your tally marks and write each total in the right-hand column above.
+\end{enumerate}
+
+\section{Step 3: Calculate Your Experimental Probability}
+\[
+  P(7)_{\text{experimental}} = \frac{\text{number of } 7\text{'s rolled}}{\text{number of
+  rolls}} = \ans
+\]
+\noindent How does your experimental probability compare to the expected probability you
+calculated in Step 1? Why might they be different?
+\anshere
+\anshere
+
+\section{Step 4: Explanatory and Response Variables}
+\noindent In this experiment, which is the \textbf{explanatory variable} and which is the
+\textbf{response variable}: the \emph{number of rolls}, or the \emph{number of $7$'s rolled}?
+Explain your answer.
+\anshere
+\anshere
+
+\end{document}
