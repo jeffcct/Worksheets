@@ -55,31 +55,20 @@ Percentage $\to$ fraction: write over $100$, simplify.
 
 \vspace{0.2em}
 \begin{center}
-\begin{minipage}{0.47\linewidth}
-\centering
 \begin{tabular}{|Y|Y|Y|}
 \hline
 \textbf{Fraction} & \textbf{Decimal} & \textbf{Percentage} \\\hline
-$\dfrac{1}{4}$ & & \\[0.6em]\hline
-$\dfrac{3}{5}$ & & \\[0.6em]\hline
- & $0.15$ & \\[0.6em]\hline
- & & $35\%$ \\[0.6em]\hline
-$\dfrac{17}{20}$ & & \\[0.6em]\hline
+$\dfrac{1}{4}$ & & \\[0.5em]\hline
+$\dfrac{3}{5}$ & & \\[0.5em]\hline
+ & $0.15$ & \\[0.5em]\hline
+ & & $35\%$ \\[0.5em]\hline
+$\dfrac{17}{20}$ & & \\[0.5em]\hline
+ & $0.08$ & \\[0.5em]\hline
+$\dfrac{1}{2}$ & & \\[0.5em]\hline
+$\dfrac{9}{10}$ & & \\[0.5em]\hline
+ & & $20\%$ \\[0.5em]\hline
+$\dfrac{3}{4}$ & & \\[0.5em]\hline
 \end{tabular}
-\end{minipage}
-\hfill
-\begin{minipage}{0.47\linewidth}
-\centering
-\begin{tabular}{|Y|Y|Y|}
-\hline
-\textbf{Fraction} & \textbf{Decimal} & \textbf{Percentage} \\\hline
- & $0.08$ & \\[0.6em]\hline
-$\dfrac{1}{2}$ & & \\[0.6em]\hline
-$\dfrac{9}{10}$ & & \\[0.6em]\hline
- & & $20\%$ \\[0.6em]\hline
-$\dfrac{3}{4}$ & & \\[0.6em]\hline
-\end{tabular}
-\end{minipage}
 \end{center}
 
 \vspace{0.4em}
@@ -120,71 +109,112 @@ $\dfrac{3}{4}$ & & \\[0.6em]\hline
 
 \newpage
 
-\section*{Multistep Events: Probability Trees}
-\noindent A \textbf{probability tree} shows the outcomes of two (or more) events, one after the
-other. \textbf{Multiply along the branches} to find the probability of a combined outcome.
+\section*{Multistep Events: Listing Sample Spaces}
+\noindent A \textbf{tree diagram} can help you list every possible outcome of a multistep
+experiment --- the \textbf{sample space}. Each complete path through the tree, from start to
+end, is one outcome. When every branch is equally likely, you don't need to label branches with
+probabilities --- just list the outcomes systematically.
 
 \vspace{0.3em}
-\noindent\textbf{Worked example:} A coin is tossed twice. Find $P(\text{two heads})$.
+\noindent\textbf{Worked example:} Flip a coin, then roll a die. List the sample space.
 
 \begin{center}
 \begin{tikzpicture}[
-  level distance=2.2cm,
-  level 1/.style={sibling distance=3.4cm},
-  level 2/.style={sibling distance=1.9cm},
+  level distance=1.9cm,
+  level 1/.style={sibling distance=4.6cm},
+  level 2/.style={sibling distance=0.75cm},
   edge from parent/.style={draw, -latex},
-  every node/.style={font=\small}
+  every node/.style={font=\scriptsize}
 ]
 \node {}
   child { node {H}
-    child { node {HH} edge from parent node[above] {$\frac12$} }
-    child { node {HT} edge from parent node[below] {$\frac12$} }
-    edge from parent node[above] {$\frac12$}
+    child { node {H1} }
+    child { node {H2} }
+    child { node {H3} }
+    child { node {H4} }
+    child { node {H5} }
+    child { node {H6} }
   }
   child { node {T}
-    child { node {TH} edge from parent node[above] {$\frac12$} }
-    child { node {TT} edge from parent node[below] {$\frac12$} }
-    edge from parent node[below] {$\frac12$}
+    child { node {T1} }
+    child { node {T2} }
+    child { node {T3} }
+    child { node {T4} }
+    child { node {T5} }
+    child { node {T6} }
   };
 \end{tikzpicture}
 \end{center}
-\noindent Multiply along each path: $P(HH)=\frac12\times\frac12=\frac14$, \;
-$P(HT)=\frac14$, \; $P(TH)=\frac14$, \; $P(TT)=\frac14$.
-
-\vspace{0.3em}
-\noindent $P(\text{two heads}) = P(HH) = \dfrac12 \times \dfrac12 = \dfrac14$.
+\noindent $\Omega = \{H1, H2, H3, H4, H5, H6, T1, T2, T3, T4, T5, T6\}$. There are $12$ equally
+likely outcomes in total.
 
 \vspace{0.5em}
-\noindent\textbf{Practice:} A bag has $3$ red and $2$ blue counters. A counter is picked, put
-back, then a second counter is picked. Complete the tree diagram below: label each branch with
-its probability, write the outcome at the end of each path, and multiply along the branches.
+\begin{multicols}{2}
+\noindent\textbf{(a)} A spinner has three equal sections: A, B, C. After spinning, you also
+toss a coin. Complete the tree diagram, then list the sample space.
 
 \begin{center}
 \begin{tikzpicture}[
-  level distance=2.6cm,
-  level 1/.style={sibling distance=3.2cm},
-  level 2/.style={sibling distance=1.7cm},
+  level distance=2.0cm,
+  level 1/.style={sibling distance=2.7cm},
+  level 2/.style={sibling distance=1.1cm},
   edge from parent/.style={draw, -latex},
-  every node/.style={font=\small}
+  every node/.style={font=\scriptsize}
 ]
 \node {}
-  child { node {R}
-    child { node {\hrulefill} edge from parent node[above] {} }
-    child { node {\hrulefill} edge from parent node[below] {} }
-    edge from parent node[above] {}
+  child { node {\hrulefill}
+    child { node {\hrulefill} }
+    child { node {\hrulefill} }
   }
-  child { node {B}
-    child { node {\hrulefill} edge from parent node[above] {} }
-    child { node {\hrulefill} edge from parent node[below] {} }
-    edge from parent node[below] {}
+  child { node {\hrulefill}
+    child { node {\hrulefill} }
+    child { node {\hrulefill} }
+  }
+  child { node {\hrulefill}
+    child { node {\hrulefill} }
+    child { node {\hrulefill} }
   };
 \end{tikzpicture}
 \end{center}
+\anshere
 
+\columnbreak
+
+\noindent\textbf{(b)} A T-shirt comes in colour Red or Blue, and size S, M or L. Complete the
+tree diagram, then list the sample space.
+
+\begin{center}
+\begin{tikzpicture}[
+  level distance=2.0cm,
+  level 1/.style={sibling distance=3.6cm},
+  level 2/.style={sibling distance=0.95cm},
+  edge from parent/.style={draw, -latex},
+  every node/.style={font=\scriptsize}
+]
+\node {}
+  child { node {\hrulefill}
+    child { node {\hrulefill} }
+    child { node {\hrulefill} }
+    child { node {\hrulefill} }
+  }
+  child { node {\hrulefill}
+    child { node {\hrulefill} }
+    child { node {\hrulefill} }
+    child { node {\hrulefill} }
+  };
+\end{tikzpicture}
+\end{center}
+\anshere
+\end{multicols}
+
+\vspace{0.3em}
 \begin{enumerate}[label=(\alph*)]
-  \item Find $P(\text{two reds})$.
+\setcounter{enumi}{2}
+  \item A meal deal lets you choose one starter (Soup or Salad) and one main (Pasta, Pizza or
+    Fish). List all possible meal combinations.
   \anshere
-  \item Find $P(\text{no reds})$.
+  \item \textbf{Extension:} A coin is tossed three times. List all possible outcomes. (Hint:
+    there are $8$.)
   \anshere
 \end{enumerate}
 
